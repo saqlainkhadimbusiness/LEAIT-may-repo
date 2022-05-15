@@ -942,21 +942,24 @@ function updateBV($id, $bv, $details)
                 if ($posUser->plan_id != 0) {
                     $position = getPositionLocation($id);
                     $extra = UserExtra::where('user_id', $posid)->first();
-                    $bvlog = new BvLog();
-                    $bvlog->user_id = $posid;
+                    if(isset($extra) && $extra) {
+                        $bvlog = new BvLog();
+                        $bvlog->user_id = $posid;
 
-                    if ($position == 1) {
-                        $extra->bv_left += $bv;
-                        $bvlog->position = '1';
-                    } else {
-                        $extra->bv_right += $bv;
-                        $bvlog->position = '2';
+                        if ($position == 1) {
+                            $extra->bv_left += $bv;
+                            $bvlog->position = '1';
+                        } else {
+                            $extra->bv_right += $bv;
+                            $bvlog->position = '2';
+                        }
+                        $extra->save();
+
+                        $bvlog->amount = $bv;
+                        $bvlog->trx_type = '+';
+                        $bvlog->details = $details;
+                        $bvlog->save();
                     }
-                    $extra->save();
-                    $bvlog->amount = $bv;
-                    $bvlog->trx_type = '+';
-                    $bvlog->details = $details;
-                    $bvlog->save();
                 }
             }
 
