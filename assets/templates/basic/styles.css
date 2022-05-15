@@ -1,0 +1,804 @@
+body { margin: 0px; background: url(imgs/mainbg.jpg) repeat-x; background-position: left 144px; font-family:Arial, Helvetica, sans-serif;	font-size:12px;	text-decoration:none;color:#000;}
+* { margin:0px;padding:0px;list-style:none;}
+.img-responsive { width:100%;height:150px;overflow:hidden;  }
+.clear { clear:both;}
+a { font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none; color:#00F;}
+.nec { font-family:Arial, Helvetica, sans-serif; font-size:14px; text-decoration:none; color:#F00;}
+.validerrors p { color:#fff !important;text-align:center; }
+.btnsub { background:#457ede;border-radius:5px;color:#fff;font-size:25px;border:none 0px;padding:8px 22px; }
+#Wrapper { width:100%;float:left;}
+#Wrapper-Container { width:950px;margin:0px auto 40px;}
+#Header { width:100%;float:left;background:url(imgs/topbg.jpg) repeat-x left top;}
+#Header-Container { width:948px;margin:0px auto;height:144px;}
+#Header-Container-Top { width:948px;margin:0px auto;height:28px;text-align:right;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#f0f0f0;text-decoration:none;line-height:28px;}
+#Header-Container-Top a { font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#f0f0f0;text-decoration:none;line-height:28px;}
+#Header-Container-Top a:hover { text-decoration:underline;}
+#Header-Container-Top2 { width:948px;margin:0px auto;height:106px;}
+#Header-Container-Top2 .logo { float:left;width:337px;height:78px; margin-top:20px;}
+#Header-Container-Top2 .logo a img{ max-width:100%;}
+#Header-Container-Top2 .rightarea { width:577px;float:right;margin:21px 0px 15px 0px;}
+#Header-Container-Top2 .loginarea { width:323px;height:26px;float:left;text-align:center}
+#Header-Container-Top2 .loginarea a { font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#0055e5;font-weight:bold;text-decoration:none;padding:4px;display:block;float:left}
+#Header-Container-Top2 .loginarea a:hover { color:#4f4f4f;text-decoration:underline;}
+#Header-Container-Top2 .loginarea span { font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#0055e5;font-weight:bold;text-decoration:none;padding:4px;display:block;float:left}
+.learn_marquee{ width:100%;float:left;margin-top:12px;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#0055e5;font-weight:bold;text-decoration:none;}
+#Header-Container-Top2 .search { width:223px;height:26px;float:right;position:relative;}
+#Header-Container-Top2 .iconsearch { position:absolute; top:2px; right:10; width:15px; height:20px; left: 202px;}
+#Header-Container-Top2 .searchbox { width:213px; height:18px; float:left; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #2b2b2b; text-decoration: none; background: url(imgs/bg-search.png) no-repeat left top; padding:6px 10px 2px; border:0px; background-color:transparent;}
+.centerbox-container { margin:0px auto 20px; width:500px; max-width:100%;}
+.centerbox-container .leftarea11 { width:464px;margin:0px auto;height:234px;background:url(imgs/rightarea1-bg.png) left top no-repeat;}
+.sabi_bg{ float:left;width:100%; background:url(imgs/slidesbg.png) left top no-repeat; background-size:100%;}
+.timestamp { width:328px;margin:0px auto;}
+.timestamp .number { width:48px;height:107px;margin:0px 34px 0px 0px;background:url(imgs/numberbg.png) left top no-repeat;padding-top:10px;float:left;}
+.timestamp .number .text { font-family:Arial, Helvetica, sans-serif;font-size:50px;color:#FFF;text-decoration:none;text-align:center;font-weight:bold;}
+.timestamp .number .text2 { font-family:Arial, Helvetica, sans-serif;font-size:20px;color:#0055e5;text-decoration:none;text-align:center;font-weight:bold;margin-top:20px;}
+.centerbox-container .left-container { width:415px;margin:0px auto;}
+.centerbox-container .left-container h5 { width:415px;float:left;font-family:Arial, Helvetica, sans-serif;font-size:22px;color:#0055e5;text-decoration:none;text-align:left;font-weight:bold;margin:10px 0px 10px 0px;}
+.centerbox-container .left-container h6 { width:415px;float:left;font-family:Arial, Helvetica, sans-serif;font-size:30px;color:#2a2e2e;text-decoration:none;text-align:left;font-weight:bold;margin:10px 0px 10px 0px;}
+.centerbox-container .rightarea1 { width:464px;float:left;height:234px;background:url(imgs/rightarea1-bg.png) left top no-repeat;}
+.centerbox-container .right-container { width:415px;margin:0px auto;}
+.centerbox-container .right-container h5 { width:415px;float:left;font-family:Arial, Helvetica, sans-serif;font-size:30px;color:#2b2b2b;text-decoration:none;text-align:left;font-weight:bold;margin:10px 0px 10px 0px;}
+.centerbox-container .rightarea1 img { float:right;}
+#Top-Nav { width:537px;float:right;height:23px;}
+#Top-Nav li { float:left;}
+#Top-Nav li a { float:left;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#484848;text-decoration:none;text-align:left;padding-left:10px;display:block;}
+#Top-Nav li a span { float:left;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#484848;text-decoration:none;text-align:left;padding:4px 10px 9px 0px;display:block;}
+#Top-Nav li a:hover { background:url(imgs/topnav-left.png) left top no-repeat;color:#FFF}
+#Top-Nav li a:hover span { background:url(imgs/topnav-right.png) right top no-repeat;color:#FFF}
+
+#Top-Nav .download a { background:url(imgs/topnav-left.png) left top no-repeat;color:#FFF}
+#Top-Nav .download a span { background:url(imgs/topnav-right.png) right top no-repeat;color:#000}
+
+#Top-Nav .download a:hover { background:url(imgs/topnav-left.png) left top no-repeat;color:#FFF}
+#Top-Nav .download a:hover span { background:url(imgs/topnav-right.png) right top no-repeat;color:#FFF}
+
+
+.info-area { width:100%;float:left;margin-bottom:27px;}
+.info-area .infocontent { width:100%; margin:0px auto;}
+.info-area h2 { width:100%; float:left; background:url(imgs/mainheadingbg.jpg) left top no-repeat; background-size:100%; text-decoration:none; text-align:center; font-weight:bold; padding:18px 0 45px; font-style: italic!important; font-family:'Monotype Corsiva'; font-size:48px; color:#fff;}
+/*.info-area p strong{ font-family:'Monotype Corsiva'; font-size:36px; line-height:36px; text-align:center;color:#4e1c3a}*/
+.info-area_dynamic{ font-size:28px !important; padding:12px 0 45px !important;}
+.info-area .contentArea { width:100%; float:left;}
+.info-area .contentleft { width:30%; margin-right:20px; float:left; background:url(imgs/content-left.png) left top no-repeat; background-size:100%; padding:20px 5px;}
+.info-area .contentleft h3 { width:100%;margin:0px auto;font-family:Arial, Helvetica, sans-serif;font-size:30px;color:#4f4f4f;text-decoration:none;text-align:left;font-weight:normal;margin-bottom:6px;}
+.info-area .contentleft p { width:100%;margin:0px auto;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#4f4f4f;text-decoration:none;text-align:left;font-weight:normal;}
+.info-area .contentleft img { float:left;margin:10px 0px 0px 12px;}
+#synergy-adds-main { width:100%; height:583px; background:url(imgs/synergy-add-bg.png) left top no-repeat; margin:0px auto;}
+#synergy-adds-main-content { width:900px;margin:0px auto;}
+#synergy-adds-main-content img { width:40px;height:40px;margin:22px 19px 0px 21px;float:left;}
+#synergy-adds-main-content h4 { width:310px;margin-top:25px;font-family:Arial, Helvetica, sans-serif;font-size:25px;color:#ffffff;text-decoration:none;text-align:left;float:left;font-weight:bold;}
+.center-text h5{ font-family:'Monotype Corsiva';font-size:42px;color:#4e1c3a;text-decoration:none;text-align:left;font-weight:bold;margin:10px 0px 10px 0px;}
+.banner-wrapper { margin:0px auto 29px; width:100%; max-width:100%; padding-top:20px;}
+.banner-wrapper img { float:left;}
+.video-section { margin:0px auto 16px auto;width:100%; float:left; background:#000;}
+.video-section img { float:left;}
+.center-text { margin:0px auto 29px auto;width:100%;}
+.center-text p { float:left;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#4f4f4f;text-decoration:none;text-align:left;line-height:20px;width:100%;}
+.center-text .para2 { float:left;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#4f4f4f;text-decoration:none;text-align:left;line-height:20px;width:48%;margin-top:20px; padding:0px 8px;}
+.center-text img { float:left;margin:20px 10px 10px 0px;}
+.center-text2 { margin:0 0 30px; width:100%; background:url(imgs/center-text2.png) left top no-repeat; background-size:100%; padding:31px 0px;}
+.center-text2 h3 { font-style: italic!important; font-family:'Monotype Corsiva'; font-size:36px;color:#4e1c3a; width:96%; padding:0px 15px;/*font-family:Arial, Helvetica, sans-serif;font-size:30px;color:#2b2b2b;text-decoration:none;font-weight:bold;text-align:center;margin-bottom:5px;*/}
+.center-text2 p { width:928px;margin:0px auto;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#4f4f4f;text-decoration:none;text-align:left;line-height:20px;}
+.bg_green { width:406px;height:96px;background:url(imgs/bg-green.png) left top no-repeat;float:left;margin-right:44px;margin-bottom:10px;}
+.bg_green2 { width:406px;height:96px;background:url(imgs/bg-green.png) left top no-repeat;float:right;margin-bottom:10px;}
+.bg_blue { width:406px;height:96px;background:url(imgs/bg-blue.png) left top no-repeat;float:left;margin-right:44px;margin-bottom:10px;}
+.bg_blue2 { width:406px;height:96px;background:url(imgs/bg-blue.png) left top no-repeat;float:right;margin-bottom:10px;}
+.bg_orange { width:406px;height:96px;background:url(imgs/bg-orange.png) left top no-repeat;float:left;margin-right:44px;margin-bottom:10px;}
+.bg_orange2 { width:406px;height:96px;background:url(imgs/bg-orange.png) left top no-repeat;float:right;margin-bottom:10px;}
+.bg_yellow { width:406px;height:96px;background:url(imgs/bg-yellow.png) left top no-repeat;float:left;margin-right:44px;margin-bottom:10px;}
+.bg_yellow2 { width:406px;height:96px;background:url(imgs/bg-yellow.png) left top no-repeat;float:right;margin-bottom:10px;}
+.info-area .contentright { width:65%;float:left;}
+.info-area .contentright-top { width:100%;float:left;margin-bottom:12px;}
+.info-area .contentright-top h3 { width:100%;float:left;font-family:Arial, Helvetica, sans-serif;font-size:35px;color:#2b2b2b;text-decoration:none;text-align:left;font-weight:bold;}
+.info-area .contentright-top p { width:100%;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#4f4f4f;text-decoration:none;text-align:left;line-height:20px;}
+#purpal-1-content-area { width:100%;float:left;}
+#purpal-1-content-area img { width:100%;float:left;}
+#purpal-1-content-area .centerarea { width:100%;float:left;background:url(imgs/purpal-1-area-center.png) left top repeat-y;}
+#purpal-1-content-area .centerarea .content { width:100%;margin:0px auto;text-align:center;}
+#purpal-1-content-area .centerarea .content h1 { width:100%;font-family:Arial, Helvetica, sans-serif;font-size:40px;color:#FFF;text-decoration:none;font-weight:bold;margin-bottom:20px;}
+#purpal-1-content-area .centerarea .content p {	width:94%; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#FFF; text-decoration:none; text-align:left; line-height:20px; padding:0px 10px;}
+#yellow-content-area { width:100%; float:left; margin-bottom:30px;}
+#yellow-content-area img { width:100%; float:left;}
+#yellow-content-area .centerarea { width:97%; float:left; background: url(imgs/purpal-area-center.png) repeat-y left top; padding:0px 15px;}
+#yellow-content-area .centerarea .content { width:100%; margin:0px auto;text-align:center;}
+#yellow-content-area .centerarea .content h1 { width:100%; font-family:Arial, Helvetica, sans-serif;font-size:40px;color:#000;text-decoration:none;font-weight:bold;margin-bottom:20px;}
+#yellow-content-area .centerarea .content p { width:100%; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#FFF; text-decoration:none; text-align:left; line-height:20px;}
+.para { font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#4f4f4f;text-decoration:none;text-align:left;background:url(imgs/icon-list.png) left 6px no-repeat;width:411px;margin:0px auto;padding:3px 0px 3px 27px;}
+.info-area .boxleft { width:50%; float:left; background:url(imgs/binternationalbg.png) left top no-repeat;margin-right:26px;padding-top:15px; text-align:justify;}
+.info-area .boxright { width:45%;float:left;}
+.purchase_img{ margin:0px auto; width:100%; margin-bottom:10px;}
+.purchase_img img{ width:100%;}
+.purchase_img-btn{ float:right; font-family:'Monotype Corsiva'; font-size:36px; line-height:36px; text-align:center; color:#4e1c3a; margin:10px 0 20px;}
+.purchase_img-btn img{ margin:10px 0 0;}
+#purpal-content-area { width:100%; float:left; margin-bottom:22px;}
+#purpal-content-area img { width:100%; float:left;}
+#purpal-content-area .centerarea { width:100%; float:left; background:url(imgs/purpal-area-center.png) left top repeat-y;}
+#purpal-content-area .centerarea .content { width:96%; margin:0px auto; text-align:center; padding:0px 15px;}
+#purpal-content-area .centerarea .content h1 { width:100%; font-family:Arial, Helvetica, sans-serif; font-size:40px; color:#FFF; text-decoration:none; font-weight:bold; margin-bottom:20px;}
+#purpal-content-area .centerarea .content p { width:100%; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#FFF; text-decoration:none; text-align:left; line-height:20px;}
+#Signup-Area { width:100%; height:50px; float:left; margin:0px auto 35px; background:url(imgs/signuparea-bg.png) left top no-repeat; background-size:100%;}
+#Signup-Area-Content { width:35%; float:right; margin-top:10px;}
+#Signup-Area-Content .btnsubmit { float:left;}
+#Signup-Area-Content .signupbox { width:66%; float:right; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #2b2b2b; text-decoration: none; background: url(imgs/txtboxsignup.png) no-repeat left top; padding: 5px; height: 18px; margin-right:7px; float:left; background-color:transparent; border:none;}
+#footer { width:100%;float:left;background-color:#2b2b2b;}
+#footer-content { width:947px;margin:0px auto;}
+#footer-content #qlinksarea { width:248px;float:left;}
+#footer-content h1 { font-family:Arial, Helvetica, sans-serif;font-size:18px;color:#FFF;text-decoration:none;text-align:left;margin:24px 0px 6px 0px;}
+#footer-content .mytext { font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#FFF;text-decoration:none;text-align:left;float:left;line-height:20px;}
+#footer-content .mytext2 { font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#FFF;text-decoration:none;text-align:left;float:left;}
+#footer-content .myimg img { float:left; margin:20px 15px 0px 0px;}
+#footer-content .btmlinks a { font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#FFF;text-decoration:none;text-align:left;float:left;padding:11px 0px 6px 0px;width:184px;display:block;}
+#footer-content .btmlinks a:hover { text-decoration:underline;}
+#footer-content .btmlinks-sep { float:left;width:184px;}
+#footer-content span { font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#FFF;text-decoration:none;text-align:left;float:left}
+#footer-content #referal-contest { width:224px;float:left;margin-right:46px;}
+#footer-content #get-social { width:181px;float:left;margin-right:36px;}
+#contact-details  { width:211px;float:left;margin-right:0px;}
+.categorylist { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #2b2b2b; text-decoration: none; background-color: #e4e4e4; padding: 3px; border: 1px solid #000101; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;}
+h3.a {text-shadow: 0 0 0.2em #000, 0 0 0.2em #000, 0 0 0.2em #000;font-size:44px;color:#cc3300}
+h3.b {text-shadow: 0 0 0.2em #000, 0 0 0.2em #000, 0 0 0.2em #000;font-size:34px;color:#3d81f3}
+h3.c {text-shadow: 0 0 0.2em #00b1d8, 0 0 0.2em #00b1d8, 0 0 0.2em #00b1d8;font-size:24px;color:#000}
+span.c {text-shadow: 0 0 0.2em #000, 0 0 0.2em #000, 0 0 0.2em #000;font-size:34px;color:#cc3300;margin-top:15px;}
+span.d {text-shadow: 0 0 0.2em #000, 0 0 0.2em #000, 0 0 0.2em #000;font-size:34px;color:#3d81f3;margin-top:15px;}		
+#synergy-adds-main-Top { float:left;width:904px;height:118px;}
+#synergy-adds-main-Top .left { float:left;padding:0px 0px 0px 15px;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#FFF;text-decoration:none;display:block;background:url(imgs/heading-left.jpg) no-repeat left top;height:118px;margin-right:20px;}
+#synergy-adds-main-Top .left span { float:left;padding:22px 15px 0px 0px;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#FFF;text-decoration:none;;display:block;background:url(imgs/heading-right.jpg) no-repeat right top;height:96px;}
+#synergy-adds-main-Bottom { float:left;width:904px;height:118px;margin-top:300px;}
+#synergy-adds-main-Bottom .left { float:left;padding:0px 0px 0px 15px;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#FFF;text-decoration:none;display:block;background:url(imgs/heading-left.jpg) no-repeat left top;height:118px;margin-right:20px;}
+#synergy-adds-main-Bottom .left span { float:left;padding:22px 15px 0px 0px;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#FFF;text-decoration:none;;display:block;background:url(imgs/heading-right.jpg) no-repeat right top;height:96px;}
+#center-text-left { float:left;width:230px;}
+#center-text-left h1 { float:left;width:100%;border-radius:5px;background-color:#457ede;text-align:center;font-size:20px;padding:10px 0px 10px 0px;border:solid 1px #353535;color:#FFF;margin-bottom:15px;}
+#center-text-left a { float:left;width:92%;background-color:#ddd9d9;text-align:left;font-size:12px;padding:5px 10px 5px 10px;border-bottom:solid 1px #353535;color:#484848;}
+#center-text-left a:hover { background-color:#FFF !important;color:#0055e5  !important;}
+#center-text-right { float:left;width:690px;margin-left:10px;}
+#center-text-right  h1 { float:left;width:96%;border-radius:5px;background-color:#457ede;text-align:left;font-size:20px;padding:10px 10px 10px 10px;border:solid 1px #353535;color:#FFF;margin-bottom:15px;}
+#center-text-right2 { border:solid 2px #000000;}
+#center-text-right2 .headingpanel { background-color:#6bbfee;padding:5px;color:#FFF;font-weight:bold;margin-bottom:5px;}
+#center-text-right2 .leftpanel { float:left;width:150px;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px 10px 10px 10px;border-right:solid 1px #000;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b}
+#center-text-right2 .rightpanel { float:left;width:495px;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+#center-text-right2 .leftpanel_transfer { float:left;width:30%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px 10px 10px 10px;border-right:solid 1px #000;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b}
+#center-text-right2 .rightpanel_transfer { float:left;width:64%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+.direct_referral{ width:100%; float:left;}
+.direct_referral-box{ width:100%; float:left;}
+#center-text-right2 .leftpanel-no { float:left;width:150px;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px 10px 10px 10px;border-right:solid 1px #000;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b}
+#center-text-right2 .rightpanel { float:left;width:495px;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+.advertising-hdng{ width:100%; float:left; font-family:'Monotype Corsiva'; font-size:36px; line-height:36px;color:#4e1c3a;}
+#center-text-right2 .rightpanel44 { display:none;}
+#center-text-right2 .headingpanel2 { background-color:#2b2b2b;padding:5px;color:#FFF;font-weight:bold;margin-bottom:0px;text-align:center;}
+#center-text-right2 .headingpanel22 { padding:5px;color:#2b2b2b;font-weight:bold;margin-bottom:0px;text-align:center;}
+.myhead { font-family:Arial, Helvetica, sans-serif; font-size:16px;color:#FFF;text-decoration:none;padding:8px 5px 10px;float:right;width:220px; font-style:italic; line-height:24px;}
+.myhead span { font-family:'Monotype Corsiva'; font-size:24px; float:left; padding-right:7px; line-height:24px;}
+.myheaddetails { font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#000;text-decoration:none;padding:4px 5px 5px 5px;float:left;width:550px;margin-left:138px;margin-top:8px;}
+#billboard-container { position: left; margin: 0px; width: 100%; padding: 0px;}
+.carousel { position: left; visibility: hidden; width: 100%;}
+#billboard-container2 { position: relative;	margin: 0px auto; width: 100%;	padding: 0px;}
+.carousel2 { position: left; visibility: hidden; width: 100%;}
+
+
+
+ /*  BOOK PAGE  */
+.user_book{ width:100%; float:left;}
+.user_book ul{ margin:0px; padding:0px;}
+.user_book ul li{ width:31%; float:left; padding:0 8px 15px;}
+.user_book ul li .user-box{ width:100%; float:left; background:#fff; box-shadow:1px 1px 2px #555;min-height:360px; }
+.user_book ul li .user-box img{ max-width:100%; display:inline-block; text-align:center;margin:0px; }
+.user_book ul li .user-box-hdng{ width:91%; float:left; font-size:20px; line-height:22px; color:#222; padding:15px 10px 5px; font-family:corbel;}
+.user_book ul li .user-box-text{ width:91%; float:left; font-size:14px; line-height:22px; color:#555; padding:0 10px 15px; font-family:corbel;}
+.user_book ul li .user-box-price{ width:91%; display:inline-block; text-align:right; font-size:28px; color:#da0000; padding:10px 10px 20px; font-weight:bold;}
+.user_book ul li .user-box-price span{ float:left; text-align:left; font-size:28px; color:#767676; text-decoration:line-through;}
+
+.user_pagi{ width:100%; float:left;}
+.user_pagi ul{ margin:0px; padding:0px;}
+.user_pagi ul li{ float:left; padding:5px 2px 20px;}
+.user_pagi ul li a{ text-decoration:none; float:left; padding:5px 10px; font-size:14px; color:#333; border-radius:3px; border:1px solid #ccc;}
+.user_pagi ul li a:hover, .user_pagi ul li a:focus, .user_pagi ul li a.active{ text-decoration:none; color:#457ede; border:1px solid #457ede;}
+
+
+
+.user_pagi a{ text-decoration:none; float:left; padding:5px 10px; font-size:14px; color:#333; border-radius:3px; border:1px solid #ccc; margin-right: 5px; }
+.user_pagi a:hover, .user_pagi a:focus, .user_pagi a.active{ text-decoration:none; color:#457ede; border:1px solid #457ede; }
+.user_pagi strong { text-decoration:none; float:left; padding:5px 10px; font-size:14px; color:#333; border-radius:3px; border:1px solid #457ede; margin-right: 5px; }
+
+
+.user_book_nav { width:100%; float:left; padding-bottom:20px;}
+.user_book_nav ul { margin:0px; padding:0px;}
+.user_book_nav ul li { list-style:none; position:relative; float:left; display:block; padding:0px 5px;}
+.user_book_nav ul li a { padding:10px; display:block; font-size:14px; color:#000; background:#fff; box-shadow:1px 1px 2px #555; transition:all .3s ease-in-out;}
+.user_book_nav ul li a:hover, .user_book_nav ul li a:focus {color:#fff; background:#457ede; transition:all .3s ease-in-out; box-shadow:none;}
+
+.user-box-detail{ width:94%; float:left; background:#fff; box-shadow:1px 1px 2px #555; margin:0 0 20px 5px; padding:15px;}
+.user-box-detail-img{ width:40%; float:right;}
+.user-box-detail-img img{ max-width:100%; display:inline-block; text-align:center; margin:0;}
+.user-box-detail-textbox{ width:55%; float:left; padding:0 15px 0 0;}
+.user-box-detail-hdng{ width:100%; float:left; font-size:20px; line-height:22px; color:#222; padding:0 0 7px; font-family:corbel; font-weight:bold;}
+.user-box-detail-text{ width:100%; float:left; font-size:14px; line-height:18px; color:#555; padding:0 0 15px; font-family:corbel;}
+.user-box-detail-price{ font-weight:bold; width:100%; display:inline-block; text-align:right; font-size:28px; color:#da0000; padding:10px 0px 20px;}
+.user-box-detail-price span{ float:left; text-align:left; font-size:28px; color:#767676; text-decoration:line-through;}
+.user-box-detail-button, .user-box-detail-button:hover, .user-box-detail-button:focus{ display:inline-block; margin:5px 0; padding:7px 15px; color:#fff; background:#457ede; font-size:14px; font-family:corbel; text-decoration:none; border:none;}
+
+
+
+
+
+
+@-webkit-keyframes .blink {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.blink {
+  -webkit-animation-name: blink;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration: 1s; 
+}
+.arial15pxblack { font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold; color: #000; text-decoration: none;}
+.arial12pxblack { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000; text-decoration: none;}
+.mytextboxnew { font-family:Arial, Helvetica, sans-serif;font-size:35px;color:#F00;text-decoration:none;font-weight:bold;border:none 0px;background-color:transparent;margin-left:0px;width:45px;}
+.validerrors p { color:#ff0000 !important;width:100% !important;font-weight:bold !important; }
+.top-nav{ float:left;background: #000; color:#fff; padding:10px; width:96%; cursor:pointer;border-radius:3px; margin-bottom:10px; display:none;}
+.top-nav span img{ padding:1px 0 0; margin:0px; float:right;}
+div.window { margin: 0px auto; float:right; width:60%;}
+div.window label { display: none;}
+input.toggle { display: none; }
+.dsply{ display:none;}
+.top-nav2{ float:left;background: #000; color:#fff; padding:10px; width:96%; cursor:pointer;border-radius:3px; margin-bottom:10px; display:none;}
+.top-nav2 span img{ padding:1px 0 0; margin:0px; float:right;}
+div.window2 { margin: 0px auto; float:left; width:100%;}
+div.window2 label { display: none;}
+input.toggle2 { display: none; }
+.pdf_img{ margin:0px; padding:20px 0;float:left;width:60%;}
+.pdf_img a{ margin:0px; padding:0 10px; float:left; width:45%;}
+.debit_card{ margin:0px; padding:55px 10px; float:left; width:34%; background-color:#000}
+.debit_card a{ float:left; width:43%; margin:0px 10px;}
+.debit_card a img{ width:100%; max-width:100%; float:left;}
+.binary-hdng{ width:100%; float:left; font-family:'Monotype Corsiva'; font-size:36px; line-height:36px; text-align:left; color:#4e1c3a; padding-bottom:20px;}
+.binary-hdng2{ font-family:'Monotype Corsiva' !important; font-size:36px !important; line-height:36px !important; text-align:center !important; color:#4e1c3a !important;}
+.purchase-hdng{ background-color:#6bbfee;color:#2b2b2b;font-size:25px;border-bottom:solid 1px #000;text-align:center;padding:5px;}
+.signup-field{ width:170px; float:left;}
+
+.sabi-layer{ width:100%; float:left; position:relative; font-size:16px; margin-bottom:2px;}
+.sabi-layer-img{ background:url(imgs/sabi-img.jpg) left top; width:140px; height:460px; position:absolute;}
+
+
+.sabi-premamber{ width:22%; height:33px; float:right; color:#fff; background:#be5501; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-premamber strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+
+
+.sabi-mamber{ width:22%; height:33px; float:right; color:#fff; background:#2b72ff; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-mamber strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+.sabi-text{ width:64%; height:33px; float:left; text-align:right; color:#333; padding:7px 15px 0 160px; border-top:2px solid #be0101;}
+.sabi-arow{
+-webkit-clip-path: polygon(100% 0%, 100% 100%, 10% 100%, 0 0);
+clip-path: polygon(100% 0%, 100% 100%, 10% 100%, 0 0);}
+.sabi-premamber-border{ border-top:2px solid #be5501;}
+.sabi-mamber-border{ border-top:2px solid #2b72ff;}
+.sabi-super-border{ border-top:2px solid #e56a10;}
+.sabi-manager-border{ border-top:2px solid #000;}
+.sabi-director-border{ border-top:2px solid #ff0000;}
+.sabi-ex-border{ border-top:2px solid #ffbc03;}
+.sabi-ex-winner-border{ border-top:2px solid #91cb02;}
+.sabi-bdm-border{ border-top:2px solid #0a8736;}
+.sabi-promo-border{ border-top:2px solid #0a4887;}
+.sabi-winer-border{ border-top:2px solid #07a2b0;}
+.sabi-alert-border{ border-top:2px solid #773388;}
+.sabi-super{ width:22%; float:right; height:33px; color:#fff; background:#e56a10; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-super strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+.sabi-manager{ width:22%; float:right; height:33px; color:#fff; background:#000; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-manager strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+.sabi-director{ width:22%; float:right; height:33px; color:#fff; background:#ff0000; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-director strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+.sabi-ex{ width:22%; float:right; height:33px; color:#fff; background:#ffbc03; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-ex strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+.sabi-bdm{ width:22%; float:right; height:33px; color:#fff; background:#0a8736; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-bdm strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+.sabi-promo{ width:22%; float:right; height:33px; color:#fff; background:#0a4887; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-promo strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+.sabi-winer{ width:22%; float:right; height:33px; color:#fff; background:#07a2b0; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-winer strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+.sabi-alert{ width:22%; float:right; height:33px; color:#fff; background:#773388; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px;}
+.sabi-alert strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+.sabi-ex-winner{ width:22%; float:right; height:33px; color:#fff; background:#91cb02; padding:3px 10px 4px 30px; position:absolute; z-index:2; right:0px; margin-bottom:2px; font-size:13px; }
+.sabi-ex-winner strong{ font-size:32px; font-family:'Monotype Corsiva'; padding-right:7px;}
+
+	.visible-xs { display:none; }
+	.hidden-sm { display:none; }
+	
+	
+@media only screen and (max-width:960px){
+	#Wrapper { width:960px;float:left;}
+	#Header-Container { width:98%;margin:0px auto;padding:0px 10px;}
+	#Header-Container-Top { width:100%; display:block;margin:0px auto;height:28px;text-align:right;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#f0f0f0;text-decoration:none;line-height:28px;}
+	#Header-Container-Top2 { width:100%; display:block;margin:0px auto;height:106px;}
+	#Wrapper-Container { width:98%; display:block;padding:0px 10px;}
+	#footer-content { width:98%;display:block;margin:0px auto; padding:0px 10px;}
+}
+
+
+@media only screen and (max-width:840px){
+	#Wrapper { width:840px;float:left;}
+	#Header-Container { width:96%;margin:0px auto;padding:0px 10px;}
+	#Header-Container-Top2 .logo { float:left;width:32%;height:78px; margin-top:20px;}
+	#Header-Container-Top2 .rightarea { width:65%;float:right;margin:21px 0px 15px 0px;}
+	#Header-Container-Top2 .loginarea { width:48%;height:26px;float:left;text-align:center}
+	#Header-Container-Top2 .search { width:48%;height:26px;float:right;position:relative;}
+	#Wrapper-Container { width:96%; display:block;padding:0px 10px;}
+	#footer-content { width:96%;display:block;margin:0px auto; padding:0px 10px;}
+	.center-text { margin:0px auto 29px;width:100%; display:block;}
+	#center-text-left { float:left;width:30%;}
+	#center-text-right { float:left;width:68%;margin-left:10px;}
+	#center-text-right2 .leftpanel { float:left;width:150px;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px 10px 10px 10px;border-right:solid 1px #000;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b}
+	#center-text-right2 .rightpanel { float:left;width:350px;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+	div.window {  margin: 0px auto; float:right; width:65%;}
+	.myheaddetails { font-size:14px; padding:0px 5px 5px 5px; float:left; width:60%; margin:8px 0 0 115px;}
+	.myhead { font-size:14px; color:#FFF; padding:5px 5px 7px 0; float:right; width:23%; margin:0;}
+	.myhead span { font-size:15px;color:#FFF;}
+	.video-section { margin:0px auto 16px auto;width:100%;}
+	.center-text { margin:0px auto 29px auto;width:100%;}
+	.center-text p { width:100%; text-align:justify;}
+	.pdf_img{ margin:0px; padding:0px;float:left;width:39%;}
+	.debit_card{ margin:0px; padding:43px 28px; float:left; width:54%; background-color:#000}
+	.debit_card a img{ width:90%; max-width:100%;}
+	.info-area .contentleft h3 { width:275px; margin:0px auto; font-size:22px; text-align:center; font-weight:normal; margin-bottom:6px;}
+	.info-area .contentleft { width:45%; margin-right:20px; float:left; background:url(imgs/content-left.png) left top no-repeat; background-size:100%; padding:20px 5px; overflow-y:scroll;}
+	.info-area .contentright { width:50%;float:left;}
+	.binary-hdng{ width:100%; float:left; font-family:'Monotype Corsiva'; font-size:36px; line-height:36px; text-align:left; color:#4e1c3a; padding-bottom:20px;}
+	.info-area .contentleft p { width:275px;}
+	.center-text2 h3 { font-style: italic!important; font-family:'Monotype Corsiva'; font-size:30px;color:#4e1c3a; width:96%; padding:0px 15px;}
+	.info-area h2 { width:96%; padding:15px; font-size:36px; background:#0f66f1; border-radius:5px; margin-bottom:20px;}
+	.info-area_dynamic{ width:100%; font-size:24px !important; padding:20px 15px !important;}
+	#yellow-content-area .centerarea { width:96%; float:left; background: url(imgs/purpal-area-center.png) repeat-y left top; padding:0px 15px 0px 16px;}
+	.info-area .boxleft { width:50%; margin-right:20px; padding-top:0; text-align:justify;}
+	#Signup-Area-Content { width:40%; float:right; margin-top:10px;}
+	#Signup-Area { width:100%; height:50px; margin:0px auto 20px;}
+	.direct_referral{ width:100%; float:left; overflow-x:scroll;}
+	.direct_referral-box{ width:690px; float:left;}
+	#center-text-right2 .rightpanel_transfer { float:left;width:62%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+.sabi-text{ width:55%; height:33px; padding:7px 15px 0 160px;}
+.sabi-premamber{ width:26%; height:33px; float:right; padding:3px 10px 4px 30px;}
+.sabi-premamber strong{ font-size:32px;}
+.sabi-mamber{ width:26%; height:33px; float:right; padding:3px 10px 4px 30px;}
+.sabi-mamber strong{ font-size:32px;}
+.sabi-super{ width:26%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-super strong{ font-size:32px;}
+.sabi-manager{ width:26%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-manager strong{ font-size:32px;}
+.sabi-director{ width:26%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-director strong{ font-size:32px;}
+.sabi-ex{ width:26%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-ex strong{ font-size:32px;}
+.sabi-ex-winner{ width:26%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-ex-winner strong{ font-size:32px;}
+.sabi-bdm{ width:26%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-bdm strong{ font-size:32px;}
+.sabi-promo{ width:26%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-promo strong{ font-size:32px;}
+.sabi-winer{ width:26%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-winer strong{ font-size:32px; }
+.sabi-alert{ width:26%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-alert strong{ font-size:32px;}
+.user_book ul li{ width:31%; float:left; padding:0 6px 15px;}
+}
+
+
+@media only screen and (max-width:768px){
+	#Wrapper { width:768px;float:left;}
+	#Header-Container-Top2 .loginarea { width:52%;height:26px;float:left;text-align:center}
+	#Header-Container-Top2 .search { width:47%;height:26px;float:right;position:relative;}
+	#Top-Nav { width:100%;float:right;height:23px;}
+	#Header-Container-Top2 .iconsearch { position:absolute;	top:2px; right:5px; width:15px;	height:20px;}
+	#Header-Container-Top2 .searchbox {	width:100%;	height:18px; float:left; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #2b2b2b; text-decoration: none; background-image: url(imgs/bg-search.png); background-repeat: no-repeat; background-position: left top; padding: 6px 0 2px 10px;border: 0px; background-color:transparent;}
+	#center-text-right2 .rightpanel { float:left;width:305px;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+	#center-text-left a { float:left;width:90%;background-color:#ddd9d9;text-align:left;font-size:12px;padding:5px 10px 5px 10px;border-bottom:solid 1px #353535;color:#484848;}
+	div.window {  margin: 0px auto; float:right; width:65%;}
+	.myheaddetails { font-size:14px; padding:0px 5px 7px 5px; float:left; width:60%; margin:8px 0 0 105px;}
+	.myhead { font-size:13px; padding:5px 5px 3px 0; float:right; width:23%; margin:0;}
+	h3.a {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:36px;color:#cc3300}
+	h3.b {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:30px;color:#3d81f3}
+	h3.c {text-shadow: 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8;font-size:20px;color:#000}
+	.debit_card{ margin:0px; padding:42px 28px 41px; float:left; width:52%;}
+	.advertising-hdng{ width:100%; font-size:24px; line-height:28px;color:#4e1c3a;}
+	.center-text .para2 { width:47%; float:left; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#4f4f4f; text-decoration:none; text-align:left; line-height:20px; margin-top:20px; padding:0px 10px;}
+	.center-text2 { margin:0 0 30px; width:100%; background:url(imgs/center-text2.png) left top no-repeat; background-size:100%; padding:30px 0px;}
+	.center-text2 h3 { font-style: italic!important; font-family:'Monotype Corsiva'; font-size:26px;color:#4e1c3a; width:96%; padding:0px 15px;}
+	#Signup-Area-Content { width:43%; float:right; margin-top:5px;}
+	#center-text-right2 .rightpanel_transfer { float:left;width:61%;}
+.sabi-mamber{ width:29%; height:33px; float:right; padding:3px 10px 4px 30px;}
+.sabi-super{ width:29%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-manager{ width:29%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-director{ width:29%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-bdm{ width:29%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-ex{ width:29%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-ex-winner{ width:29%; float:right; height:33px; padding:3px 10px 4px 30px;font-size:10px;}
+.sabi-promo{ width:29%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-winer{ width:29%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.sabi-alert{ width:29%; float:right; height:33px; padding:3px 10px 4px 30px;}
+.user_book ul li{ width:45%; float:left; padding:0 10px 15px;}
+}
+
+
+@media only screen and (max-width:736px){
+	#Wrapper { width:736px;float:left;}
+	#Header-Container-Top2 .logo { float:left;width:31%;height:78px; margin-top:20px;}
+	#Header-Container-Top2 .rightarea { width:68%;float:right;margin:21px 0px 15px 0px;}
+	#Header-Container-Top2 .loginarea { width:51%;height:26px;float:left;text-align:center}
+	#Header-Container-Top2 .search { width:47%;height:26px;float:right;position:relative;}
+	#center-text-right2 .rightpanel { float:left;width:285px;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+	#footer-content #referal-contest { width:224px;float:left;margin-right:20px;}
+	.myhead span { font-size:16px;color:#FFF;}
+	.myheaddetails { font-size:14px; padding:0px 5px 7px 5px; float:left; width:60%; margin:7px 0 0 100px;}
+	.debit_card{ margin:0px; padding:40px 28px; float:left; width:52%;}
+	#yellow-content-area .centerarea { width:96%; float:left; background: url(imgs/purpal-area-center.png) repeat-y left top; padding:0px 14px 0px 13px;}
+	#Signup-Area-Content { width:42%; float:right; margin-top:5px;}
+.sabi-text{ width:55%; height:33px; padding:7px 15px 0 160px;}
+
+}
+
+@media only screen and (max-width:640px){
+	#Wrapper { width:640px;float:left;}
+	#Header-Container { width:96%;margin:0px auto;padding:0px 10px;}
+	#Header-Container-Top2 .logo { float:left;width:100%;height:78px; margin-top:20px; text-align:center;}
+	#Header-Container-Top2 .rightarea { width:100%;float:left;margin:25px 0px 15px 0px;}
+	#Top-Nav { width:100%;float:left;height:23px; padding:0 0 10px;}
+	#center-text-left h1 { float:left;width:100%;border-radius:5px;background-color:#457ede;text-align:center;font-size:16px;padding:10px 0px 10px 0px;border:solid 1px #353535;color:#FFF;margin-bottom:15px;}
+	#center-text-right  h1 { float:left;width:96%;border-radius:5px;background-color:#457ede;text-align:left;font-size:16px;padding:10px 10px 10px 10px;border:solid 1px #353535;color:#FFF;margin-bottom:15px;}
+	#center-text-right2 .rightpanel { float:left;width:220px;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+	#footer-content #qlinksarea { width:30%;float:left; padding-right:15px;}
+	#footer-content #referal-contest { width:30%;float:left;margin-right:15px;}
+	#footer-content #get-social { width:30%;float:left;margin-right:15px;}
+	#contact-details  { width:30%;float:left;margin-right:0px;}
+	div.window {  margin: 0px auto; float:left; width:100%;}
+	.myheaddetails { font-size:14px; padding:0px 5px 7px 5px; float:left; width:64%; margin:3px 0 0 0;}
+	.sabi_bg{ float:left;width:100%; background:url(imgs/slidesbg2.png) left top no-repeat; background-size:100%; padding:85px 0 10px;}
+	.myhead { font-size:14px; padding:5px 5px 5px 0; float:right; width:33%; margin:0;}
+	.myhead span { font-size:22px;color:#FFF;}
+	h3.a {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:32px;color:#cc3300}
+	h3.b {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:26px;color:#3d81f3}
+	h3.c {text-shadow: 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8;font-size:18px;color:#000}
+	span.c {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:26px;color:#cc3300;margin-top:15px;}
+	span.d {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:26px;color:#3d81f3;margin-top:15px;}
+	.debit_card{ margin:0px; padding:36px 28px 37px; float:left; width:50%;}
+	.debit_card a img{ width:90%; max-width:100%; padding:0px 15px;}
+	.centerbox-container { margin:0px ;width:100%;}
+	.center-text .para2 { width:46%; float:left; line-height:20px; margin-top:0; padding:0px 10px;}
+	.center-text2 { margin:0 0 30px; width:100%; background:url(imgs/center-text2.png) left top no-repeat; background-size:100%; padding:23px 0px;}
+	.center-text2 h3 { font-style: italic!important; font-family:'Monotype Corsiva'; font-size:24px;color:#4e1c3a; width:96%; padding:0px 15px;}
+	.binary-hdng2{ font-family:'Monotype Corsiva' !important; font-size:22px !important; line-height:26px !important;}
+	#yellow-content-area .centerarea { width:96%; float:left; background: url(imgs/purpal-area-center.png) repeat-y left top; padding:0px 12px 0px 12px;}
+	#Signup-Area-Content .signupbox { width:90%; float:right; font-weight: normal; color: #2b2b2b; padding:5px; height: 18px;}
+	#Signup-Area-Content .btnsubmit { float:right; margin-top:5px;}
+	#center-text-right2 .leftpanel_transfer { float:left;width:40%;padding:10px;}
+	#center-text-right2 .rightpanel_transfer { float:left;width:50%;padding:10px;}
+.sabi-text{ width:55%; height:33px; padding:7px 10px 0 160px;}
+.sabi-premamber{ width:32%; height:33px; float:right; padding:7px 10px 0px 20px;}
+.sabi-premamber strong{ font-size:26px;}
+.sabi-mamber{ width:32%; height:33px; float:right; padding:7px 10px 0px 20px;}
+.sabi-mamber strong{ font-size:26px;}
+.sabi-super{ width:32%; float:right; height:33px; padding:7px 10px 0px 20px;}
+.sabi-super strong{ font-size:26px;}
+.sabi-manager{ width:32%; float:right; height:33px; padding:7px 10px 0px 20px;}
+.sabi-manager strong{ font-size:26px;}
+.sabi-director{ width:32%; float:right; height:33px; padding:7px 10px 0px 20px;}
+.sabi-director strong{ font-size:26px;}
+.sabi-ex{ width:32%; float:right; height:33px; padding:7px 10px 0px 20px;}
+.sabi-ex strong{ font-size:26px;}
+.sabi-ex-winner{ width:32%; float:right; height:33px; padding:7px 10px 0px 20px;font-size:10px;}
+.sabi-ex-winner strong{ font-size:22px;}
+.sabi-bdm{ width:32%; float:right; height:33px; padding:7px 10px 0px 20px;}
+.sabi-bdm strong{ font-size:26px;}
+.sabi-promo{ width:32%; float:right; height:33px; padding:7px 10px 0px 20px;}
+.sabi-promo strong{ font-size:26px;}
+.sabi-winer{ width:32%; float:right; height:33px; padding:7px 10px 0px 20px;}
+.sabi-winer strong{ font-size:26px; }
+.sabi-alert{ width:32%; float:right; height:33px; padding:7px 10px 0px 20px;}
+.sabi-alert strong{ font-size:26px;}
+.user_book ul li{ width:47%; float:left; padding:0 6px 15px;}
+.user-box-detail{ width:94%; float:left; background:#fff; box-shadow:1px 1px 2px #555; margin:0 0 20px 0; padding:10px;}
+}
+
+@media only screen and (max-width:576px){
+	#Wrapper { width:576px;float:left;}
+	.sabi_bg{ float:left;width:100%; background:url(imgs/slidesbg2.png) left top no-repeat; background-size:100%; padding:78px 0 10px;}
+	.myhead { font-size:12px; padding:2px 5px 6px 0; float:right; width:33%; margin:0; line-height:19px;}
+	.myhead span { font-size:20px;color:#FFF; line-height:23px;}
+	.user_book ul li{ width:96%; float:left; padding:0 6px 15px;}
+	
+	
+	.hidden-xs { display:none; }
+	.visible-xs { display:block; }
+	.hidden-sm { display:block; }
+}
+
+
+@media only screen and (max-width:568px){
+	#Wrapper { width:568px;float:left;}
+	#center-text-right2 .leftpanel { float:left;width:25%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px 10px 10px 10px;border-right:solid 1px #000;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b}
+	#center-text-right2 .rightpanel { float:left;width:63%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+	#footer-content .btmlinks-sep { float:left;width:100%;}
+	#footer-content .btmlinks-sep img{ float:left;max-width:100%;}
+	#footer-content span { width:100%; font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#FFF;text-decoration:none;text-align:left;float:left}
+	.sabi_bg{ float:left;width:100%; background:url(imgs/slidesbg2.png) left top no-repeat; background-size:100%; padding:75px 0 10px;}
+	.myhead { font-size:14px; padding:2px 5px 4px 0; float:right; width:33%; margin:0;}
+	.myhead span { font-size:18px;color:#FFF;}
+	h3.a {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:26px;color:#cc3300}
+	h3.b {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:22px;color:#3d81f3}
+	h3.c {text-shadow: 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8;font-size:16px;color:#000}
+	span.c {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:22px;color:#cc3300;margin-top:15px;}
+	span.d {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:22px;color:#3d81f3;margin-top:15px;}
+	.debit_card a img{ width:80%; max-width:100%; padding:0px 15px; margin:0px;}
+	.center-text2 h3 { font-style: italic!important; font-family:'Monotype Corsiva'; font-size:20px;color:#4e1c3a; width:96%; padding:0px 15px;}
+	.info-area h2 { width:94%; padding:15px; font-size:28px; background:#0f66f1; border-radius:5px; margin-bottom:20px;}
+	.info-area .contentleft { width:94%; margin-right:0px; float:left; background:url(imgs/content-left.png) left top no-repeat; background-size:100%; padding:20px 15px; overflow-y:scroll;}
+	.info-area .contentright { width:100%;float:left;}
+	.binary-hdng2{ font-family:'Monotype Corsiva' !important; font-size:26px !important; line-height:26px !important;}
+	.info-area .boxleft { width:100%; margin-right:0; padding-top:0; text-align:justify;}
+	.info-area .boxright { width:100%;float:left;}
+	#yellow-content-area .centerarea { width:96%; float:left; background: url(imgs/purpal-area-center.png) repeat-y left top; padding:0px 11px;}
+	#Signup-Area-Content { width:100%; float:left; margin-top:35px;}
+	#Signup-Area-Content .signupbox { width:60%; float:left; font-weight: normal; color: #2b2b2b; padding:5px; height: 18px;}
+	#center-text-right2 .rightpanel_transfer { float:left;width:48%;padding:10px;}
+.sabi-layer{ width:100%; float:left; position:relative; font-size:14px; margin-bottom:2px;}
+.sabi-layer-img{ background:url(imgs/sabi-img2.jpg) left top no-repeat; background-size:100%; width:100%; height:85px; position:static;}
+.sabi-text{ width:65%; height:26px; padding:5px 10px 0 0;}
+.sabi-premamber{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-mamber{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-premamber strong{ font-size:20px; }
+.sabi-mamber strong{ font-size:20px;}
+.sabi-super{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-super strong{ font-size:20px;}
+.sabi-manager{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-manager strong{ font-size:20px;}
+.sabi-director{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-director strong{ font-size:20px;}
+.sabi-ex{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex strong{ font-size:20px;}
+.sabi-ex-winner{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;font-size:10px;}
+.sabi-ex-winner strong{ font-size:20px;}
+.sabi-bdm{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-bdm strong{ font-size:20px;}
+.sabi-promo{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-promo strong{ font-size:20px;}
+.sabi-winer{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-winer strong{ font-size:20px; }
+.sabi-alert{ width:32%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-alert strong{ font-size:20px;}
+.user-box-detail-img{ width:100%; float:left; margin-bottom:20px;}
+.user-box-detail-textbox{ width:94%; float:left; padding:0 15px 0 0;}
+}
+
+
+
+
+@media only screen and (max-width:480px){
+	#Wrapper { width:480px;float:left;}
+	#Header-Container-Top { text-align:center;}
+	#Header-Container-Top2 .loginarea a { font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#0055e5;font-weight:bold;text-decoration:none;padding:4px;display:block;float:left}
+	#Header-Container-Top2 .search { width:49%;height:26px;float:right;position:relative;}
+	#Header-Container-Top2 .searchbox {	width:190px; height:18px; float:left; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #2b2b2b; text-decoration: none; background-image: url(imgs/bg-search.png); background-repeat: no-repeat; background-position: left top; padding:4px 28px 4px 5px; border: 0px; background-color:transparent;}
+	#Header-Container-Top2 .rightarea { width:100%;float:left;margin:25px 0px 10px 0px;}
+	#center-text-left { float:left;width:100%;}
+	#center-text-right { float:left;width:100%;margin-left:0px;}
+	#center-text-right2 .leftpanel { float:left;width:30%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px 10px 10px 10px;border-right:solid 1px #000;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b}
+	#center-text-right2 .rightpanel { float:left;width:61%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+	#center-text-left h1 { float:left;width:98%;border-radius:5px;background-color:#457ede;text-align:center;font-size:16px;padding:10px 0px 10px 0px;border:solid 1px #353535;color:#FFF;margin-bottom:15px;}
+	#center-text-left a { float:left;width:94%;background-color:#ddd9d9;text-align:left;font-size:12px;padding:5px 10px 5px 10px;border-bottom:solid 1px #353535;color:#484848;}
+.top-nav{ float:left;background: #000; color:#fff; padding:10px; width:94%; cursor:pointer;border-radius:3px; margin-bottom:10px; display:block; font-size:16px; font-weight:bold;}
+div.window { color: white; width: 100%; margin: 1rem; text-align: center; margin: 0 auto;}
+div.window label { display: block; font-size: larger; border-radius: 5px; padding: .6rem; transition: .4s all linear;}
+div.window label:hover { cursor: pointer; background: #311;}
+input.toggle ~ div { height: 0px; overflow: hidden; transition: .6s all cubic-bezier(0.730, -0.485, 0.145, 1.620)}
+input.toggle:checked ~ div { min-height:350px; }
+input.toggle:checked + label { }
+input.toggle { display: none; }
+.dsply{ display:block; width:100%; float:left; margin-bottom:20px; background:#111; text-align:left; cursor:pointer;}
+.top-nav2{ float:left;background: #000; color:#fff; padding:10px; width:95%; cursor:pointer;border-radius:3px; margin-bottom:10px; display:block; font-size:16px; font-weight:bold;}
+div.window2 { color: white; width: 100%; margin: 1rem; text-align: center; margin: 0 auto;}
+div.window2 label { display: block; font-size: larger; border-radius: 5px; padding: .6rem; transition: .4s all linear;}
+div.window2 label:hover {  cursor: pointer; background: #311;}
+input.toggle2 ~ div {  height: 0px; overflow: hidden; transition: .6s all cubic-bezier(0.730, -0.485, 0.145, 1.620)}
+input.toggle2:checked ~ div { min-height:1246px; }
+input.toggle2:checked + label { }
+input.toggle2 { display: none; }
+#Top-Nav li { float:left; width:100%;}
+	.sabi_bg{ float:left; width:100%; background:url(imgs/slidesbg2.png) left top no-repeat; background-size:100%; padding:63px 0 10px;}
+	.myheaddetails { font-size:12px; padding:0px 5px 5px 5px; float:left; width:62%; margin:3px 0 0 0;}
+	.myhead { font-size:12px; padding:0px 5px 2px 0; float:right; width:34%; margin:0;}
+	.myhead span { font-size:16px;color:#FFF;}
+	h3.a {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:20px;color:#cc3300}
+	h3.b {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:18px;color:#3d81f3}
+	h3.c {text-shadow: 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8;font-size:14px;color:#000}
+	span.c {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:18px;color:#cc3300;margin-top:5px;}
+	span.d {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:18px;color:#3d81f3;margin-top:5px;}
+	.pdf_img{ margin:0px; padding:0px;float:left;width:100%;}
+	.debit_card{ margin:0px; padding:0 23px 43px; float:left; width:90%; background-color:#000}
+	.debit_card a img{ width:90%; max-width:100%; padding:0px; margin:0px 20px;}
+	.center-text .para2 { width:100%; float:left; line-height:20px; margin-top:0; padding:0px;}
+	.center-text2 { margin:0 0 20px; width:100%; background:url(imgs/center-text2.png) left top no-repeat; background-size:100%; padding:18px 0px;}
+	.center-text2 h3 { font-style: italic!important; font-family:'Monotype Corsiva'; font-size:16px;color:#4e1c3a; width:96%; padding:0px 15px;}
+	.binary-hdng{ width:100%; float:left; font-family:'Monotype Corsiva'; font-size:30px; line-height:30px; text-align:left; color:#4e1c3a; padding-bottom:10px;}
+	#Wrapper-Container { width:95%; display:block;padding:0px 10px;}
+	#center-text-right  h1 { float:left;width:94%;border-radius:5px;background-color:#457ede;text-align:left;font-size:16px;padding:10px 10px 10px 10px;border:solid 1px #353535;color:#FFF;margin-bottom:15px;}
+	#center-text-right2 .rightpanel_transfer { float:left;width:50%;padding:10px;}
+	.debit_card a{ float:left; width:43%; margin:0px 7px;}
+.sabi-layer{ width:100%; float:left; position:relative; font-size:14px; margin-bottom:2px;}
+.sabi-layer-img{ background:url(imgs/sabi-img2.jpg) left top no-repeat; background-size:100%; width:100%; height:70px; position:static;}
+.sabi-text{ width:65%; height:26px; padding:5px 10px 0 0;}
+.sabi-premamber{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-mamber{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-super{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-manager{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-director{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex-winner{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;font-size:10px;}
+.sabi-bdm{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-promo{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-winer{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-alert{ width:38%; height:26px; float:right; padding:5px 10px 0px 20px;}
+}
+
+
+@media only screen and (max-width:414px){
+	#Wrapper { width:410px;float:left;}
+	#Header-Container-Top2 .loginarea { width:100%;height:26px;float:left;text-align:center}
+	#Header-Container-Top2 .search { width:100%;height:26px;float:left;position:relative;}
+	.top-nav{ float:left;background: #000; color:#fff; padding:10px; width:94%; margin-bottom:10px; }
+	.top-nav2{ float:left;background: #000; color:#fff; padding:10px; width:94%; margin-bottom:10px;}
+	#center-text-right  h1 { width:94%;font-size:16px;padding:10px 10px 10px 10px;border:solid 1px #353535;color:#FFF;margin-bottom:15px;}
+	#center-text-left h1 { width:99%;font-size:16px;padding:10px 0px 10px 0px;border:solid 1px #353535;color:#FFF;margin-bottom:15px;}
+	#center-text-right2 .leftpanel { float:left;width:28%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:10px 10px 10px 10px;border-right:solid 1px #000;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b}
+	.categorylist{ width:86%;}
+	.sabi_bg{ float:left; width:100%; background:url(imgs/slidesbg2.png) left top no-repeat; background-size:100%; padding:54px 0 10px;}
+	.myheaddetails { font-size:12px; line-height:18.7px; padding:0px 5px; float:left; width:60%; margin:1px 0 0 0;}
+	.myhead { font-size:11px; padding:0px; float:right; width:35%; margin:0; line-height:18px;}
+	.myhead span { font-size:13px;color:#FFF; line-height:18px;}
+	.center-text h5{ font-family:'Monotype Corsiva';font-size:36px;color:#4e1c3a;text-decoration:none;text-align:left;font-weight:bold;margin:10px 0px 10px 0px;}
+	.center-text2 { margin:0 0 10px; width:100%; background:none; padding:0px;}
+	.center-text2 h3 { font-style: italic!important; font-family:'Monotype Corsiva'; font-size:22px;color:#4e1c3a; width:92%; padding:0px 15px;}
+	#yellow-content-area .centerarea { width:94%; float:left; background: url(imgs/purpal-area-center.png) repeat-y left top; padding:0px 12px;}
+	.info-area h2 { width:92%; padding:15px; font-size:24px; background:#0f66f1; border-radius:5px; margin-bottom:20px;}
+	.info-area .contentleft { width:92%; margin-right:0px; float:left; background:url(imgs/content-left.png) left top no-repeat; background-size:100%; padding:20px 15px; overflow-y:scroll;}
+	.debit_card{ margin:0px; padding:0 20px 40px; float:left; width:90%; background-color:#000}
+	.center-text img { float:left;margin:20px 0 10px 0px;}
+	#Signup-Area-Content { width:100%; float:left; margin-top:5px;}
+	#Signup-Area-Content .signupbox { width:70%; float:left; font-weight: normal; color: #2b2b2b; padding:5px; height: 18px; margin-top:20px;}
+	#Signup-Area-Content .btnsubmit { float:right; margin-top:20px;}
+	#Signup-Area { width:100%; height:auto; margin:0px auto 20px;}
+	#footer-content #qlinksarea { width:100%;float:left; padding-right:0;}
+	#footer-content #referal-contest { width:100%;float:left;margin-right:0;}
+	#footer-content #get-social { width:100%;float:left;margin-right:0;}
+	.binary-hdng{ width:100%; float:left; font-family:'Monotype Corsiva'; font-size:26px; line-height:30px; text-align:left; color:#4e1c3a; padding-bottom:10px;}
+	#purpal-content-area .centerarea .content { width:92%; margin:0px auto; text-align:center; padding:0px 10px;}
+	#purpal-content-area .centerarea .content h1 { width:100%; font-family:Arial, Helvetica, sans-serif; font-size:30px; color:#FFF; text-decoration:none; font-weight:bold; margin-bottom:20px;}
+	.info-area { width:100%;float:left;margin-bottom:10px;}
+	.purchase_img-btn{ float:right; font-family:'Monotype Corsiva'; font-size:26px; line-height:26px; text-align:center; color:#4e1c3a; margin:0 0 10px;}
+	.signup-field{ width:100px; float:left;}
+	#center-text-right2 .rightpanel_transfer { float:left;width:49%;padding:10px;}
+.sabi-layer{ width:100%; float:left; position:relative; font-size:12px; margin-bottom:2px;}
+.sabi-layer-img{ background:url(imgs/sabi-img2.jpg) left top no-repeat; background-size:100%; width:100%; height:55px; position:static;}
+.sabi-text{ width:65%; height:26px; padding:5px 10px 0 0;}
+.sabi-premamber{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-mamber{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-super{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-manager{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-director{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex-winner{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;font-size:10px;font-size:10px;}
+.sabi-bdm{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-promo{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-winer{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-alert{ width:41%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.user-box-detail-img img{ margin:0;}
+.pdf_img a{ margin:0px; padding:0; float:left; width:100%;}
+}
+
+@media only screen and (max-width:375px){
+	#Wrapper { width:375px;float:left;}
+	#Header-Container { width:94%;margin:0px auto;padding:0px 10px;}
+	#Wrapper-Container { width:94%; display:block;padding:0px 10px;}
+	#contact-details  { width:100%;float:left;margin-right:0px;}
+	.sabi_bg{ float:left; width:100%; background:url(imgs/slidesbg2.png) left top no-repeat; background-size:100%; padding:50px 0 10px;}
+	.myheaddetails { font-size:12px; line-height:16.4px; padding:0px 5px; float:left; width:50%; margin:1px 0 0 0;}
+	.myhead { font-size:12px; padding:0px; float:right; width:46%; margin:0; line-height:19px;}
+	.myhead span { font-size:15px; color:#000; line-height:18px;}
+	h3.a {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:28px;color:#cc3300}
+	h3.b {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:24px;color:#3d81f3}
+	h3.c {text-shadow: 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8, 0 0 0.1em #00b1d8;font-size:20px;color:#000}
+	span.c {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:22px;color:#cc3300;margin-top:5px;}
+	span.d {text-shadow: 0 0 0.1em #000, 0 0 0.1em #000, 0 0 0.1em #000;font-size:22px;color:#3d81f3;margin-top:5px;}
+	.debit_card{ margin:0px; padding:0 17px 20px 18px; float:left; width:90%; background-color:#000}
+	.debit_card a img{ width:49%;}
+	.debit_card a img{ width:90%; max-width:100%; padding:0px; margin:0px 10px;}
+	.center-text h5{ font-family:'Monotype Corsiva';font-size:32px;color:#4e1c3a;text-decoration:none;text-align:left;font-weight:bold;margin:10px 0px 10px 0px;}
+	.info-area h2 { width:91%; padding:15px; font-size:24px; background:#0f66f1; border-radius:5px; margin-bottom:10px;}
+	.info-area .contentleft { width:91%; margin-right:0px; float:left; background:url(imgs/content-left.png) left top no-repeat; background-size:100%; padding:20px 15px; overflow-y:scroll;}
+	#yellow-content-area .centerarea { width:94%; float:left; background: url(imgs/purpal-area-center.png) repeat-y left top; padding:0px 10px 0 11px;}
+	#footer-content { width:94%;display:block;margin:0px auto; padding:0px 10px;}
+	#center-text-right2 .rightpanel_transfer { float:left;width:48%;padding:10px;}
+.sabi-premamber{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-mamber{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-super{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-manager{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-director{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex-winner{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;font-size:10px;}
+.sabi-bdm{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-promo{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-winer{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-alert{ width:44%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.user_book ul li{ width:96%; float:left; padding:0 6px 15px;}
+.user_book ul li .user-box img{ width:100%; display:inline-block; text-align:center;margin:0px;}
+}
+
+
+@media only screen and (max-width:360px){
+	#Wrapper { width:360px;float:left;}
+	#Header-Container-Top2 .loginarea { width:100%;height:26px;float:left;text-align:center}
+	#Header-Container-Top2 .search { width:100%;height:26px;float:left;position:relative;}
+	.top-nav{ float:left;background: #000; color:#fff; padding:10px; width:94%; cursor:pointer;border-radius:3px; margin-bottom:10px; display:block; font-size:16px; font-weight:bold;}
+	.top-nav2{ float:left;background: #000; color:#fff; padding:10px; width:94%; cursor:pointer;border-radius:3px; margin-bottom:10px; display:block; font-size:16px; font-weight:bold;}
+	#center-text-right  h1 { float:left;width:94%;border-radius:5px;background-color:#457ede;text-align:left;font-size:16px;padding:10px 10px 10px 10px;border:solid 1px #353535;color:#FFF;margin:15px 0;}
+	#center-text-left h1 { float:left;width:98%;border-radius:5px;background-color:#457ede;text-align:center;font-size:16px;padding:10px 0px 10px 0px;border:solid 1px #353535;color:#FFF;margin-bottom:15px;}
+	#center-text-left a { float:left;width:92%;background-color:#ddd9d9;text-align:left;font-size:12px;padding:5px 10px 5px 10px;border-bottom:solid 1px #353535;color:#484848;}
+	#center-text-right2 .leftpanel { float:left;width:30%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:7px 5px;border-right:solid 1px #000;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b}
+	#center-text-right2 .rightpanel { float:left;width:63%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:7px 5px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+	#Header-Container { width:94%;margin:0px auto;padding:0px 10px;}
+	#footer-content #qlinksarea { width:100%;float:left; padding-right:0px;}
+	#footer-content #referal-contest { width:100%;float:left;margin-right:0px;}
+	#footer-content #get-social { width:100%;float:left;margin-right:0px;}
+	#contact-details  { width:100%;float:left;margin-right:0px;}
+	.sabi_bg{ float:left; width:100%; background:url(imgs/slidesbg2.png) left top no-repeat; background-size:100%; padding:48px 0 10px;}
+	.myheaddetails { font-size:12px; line-height:16.4px; padding:0px 5px; float:left; width:50%; margin:1px 0 0 0;}
+	.myhead { font-size:12px; padding:0px; float:right; width:46%; margin:0; line-height:18px;}
+	.myhead span { font-size:15px; color:#000; line-height:18px;}
+	.debit_card{ margin:0px; padding:0 17px 20px 17px; float:left; width:90%; background-color:#000}
+	#purpal-content-area .centerarea .content h1 { width:100%; font-size:26px; color:#FFF; text-decoration:none; font-weight:bold; margin-bottom:20px;}
+	#center-text-right2 .rightpanel_transfer { float:left;width:47%;padding:10px;}
+.sabi-layer-img{ background:url(imgs/sabi-img2.jpg) left top no-repeat; background-size:100%; width:100%; height:52px; position:static;}
+.sabi-text{ width:65%; height:26px; padding:5px 10px 0 0;}
+.sabi-premamber{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-mamber{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-super{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-manager{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-director{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex-winner{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;font-size:10px;}
+.sabi-bdm{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-promo{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-winer{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-alert{ width:46%; height:26px; float:right; padding:5px 10px 0px 20px;}
+}
+
+
+@media only screen and (max-width:320px){
+	#Wrapper { width:320px;float:left;}
+	#center-text-right2 .leftpanel { float:left;width:22%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:7px 5px;border-right:solid 1px #000;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b}
+	#center-text-right2 .rightpanel { float:left;width:70%;background:url(imgs/bg.jpg) left top repeat-x;text-align:left;padding:7px 5px;border-top:solid 1px #000;font-weight:bold;color:#2b2b2b;}
+	.top-nav{ float:left;background: #000; color:#fff; padding:10px; width:92%; cursor:pointer;border-radius:3px; margin-bottom:10px; display:block; font-size:16px; font-weight:bold;}
+	.top-nav2{ float:left;background: #000; color:#fff; padding:10px; width:92%; cursor:pointer;border-radius:3px; margin-bottom:10px; display:block; font-size:16px; font-weight:bold;}
+	.sabi_bg{ float:left; width:100%; background:url(imgs/slidesbg2.png) left top no-repeat; background-size:100%; padding:41px 0 10px;}
+	.myheaddetails { font-size:10px; line-height:14px; padding:0px 5px; float:left; width:50%; margin:1px 0 0 0;}
+	.myhead { font-size:11px; padding:0px; float:right; width:46%; margin:0; line-height:14px;}
+	.myhead span { font-size:12px; color:#000; line-height:17px;}
+	.debit_card{ margin:0px; padding:0 15px 20px; float:left; width:90%; background-color:#000}
+	.center-text h5{ font-family:'Monotype Corsiva';font-size:28px;color:#4e1c3a;text-decoration:none;text-align:left;font-weight:bold;margin:10px 0px 10px 0px;}
+	.info-area h2 { width:90%; padding:15px; font-size:24px; background:#0f66f1; border-radius:5px; margin-bottom:10px;}
+	.info-area .contentleft { width:90%; margin-right:0px; float:left; background:url(imgs/content-left.png) left top no-repeat; background-size:100%; padding:20px 15px; overflow-y:scroll;}
+	.binary-hdng2{ font-family:'Monotype Corsiva' !important; font-size:22px !important; line-height:26px !important;}
+	#Signup-Area-Content .signupbox { width:70%; float:left; font-weight: normal; color: #2b2b2b; padding:5px; height: 18px; margin:20px 0 0;}
+	#center-text-right  h1 { float:left;width:92% !important;border-radius:5px;background-color:#457ede;text-align:left;font-size:16px;padding:10px 10px 10px 10px;border:solid 1px #353535;color:#FFF;margin:15px 0;}
+	#center-text-right2 .leftpanel_transfer { float:left;width:32%;padding:10px;}
+	#center-text-right2 .rightpanel_transfer { float:left;width:54%;padding:10px;}
+.sabi-layer-img{ background:url(imgs/sabi-img2.jpg) left top no-repeat; background-size:100%; width:100%; height:47px; position:static;}
+.sabi-text{ width:65%; height:26px; padding:5px 10px 0 0;}
+.sabi-premamber{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-mamber{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-super{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-manager{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-director{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-ex-winner{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px; font-size:10px; }
+.sabi-bdm{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-promo{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-winer{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+.sabi-alert{ width:53%; height:26px; float:right; padding:5px 10px 0px 20px;}
+}
