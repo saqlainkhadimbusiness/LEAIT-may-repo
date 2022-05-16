@@ -997,7 +997,7 @@ function treeComission($id, $amount, $details,$plan_id)
                     }
                 }
 
-                $posUser->balance  += $amount;
+//                $posUser->balance  += $amount;
                 $posUser->total_binary_com += $amount;
                 $posUser->save();
 
@@ -1045,7 +1045,7 @@ function referralComission($user_id, $details,$plan_id)
                 $amount = $plan->ref_com;
             }
 
-            $refer->balance += $amount;
+//            $refer->balance += $amount;
             $refer->total_ref_com += $amount;
             $refer->save();
 
