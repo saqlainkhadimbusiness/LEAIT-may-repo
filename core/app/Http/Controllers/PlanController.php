@@ -49,11 +49,11 @@ class PlanController extends Controller
             }
           $total_ads_block=DB::table('seen_ads')->where('user_id',$user->id)->count();
             $show_adds=$plan->total_ads-$total_ads_block;
-            
+
             $data['ad_records'] = DB::select('SELECT  *
             FROM    ads
             WHERE   id NOT IN (SELECT ads_id FROM seen_ads  Where user_id  = ' . $user->id . ' ) LIMIT '.$show_adds);
-       
+
         }
 
         $data['plans'] = Plan::whereStatus(1)->get();
@@ -117,7 +117,8 @@ class PlanController extends Controller
         $gnl = GeneralSetting::first();
 
         $user = User::find(Auth::id());
-
+        $current_user=$user->id;
+//        dd($current_user);
         if ($user->balance < $plan->price) {
             $notify[] = ['error', 'Insufficient Balance'];
             return back()->withNotify($notify);
@@ -156,15 +157,14 @@ class PlanController extends Controller
             updatePaidCount($user->id);
         }
         $details = Auth::user()->username . ' Subscribed to ' . $plan->name . ' plan.';
-
-        updateBV($user->id, $plan->bv, $details);
-
+        if(is_matching_bonus($user->id)) {
+            updateBV($user->id, $plan->bv, $details);
+        }
         if ($plan->tree_com > 0) {
             treeComission($user->id, $plan->tree_com, $details,$request->plan_id);
         }
 
         referralComission($user->id, $details,$request->plan_id);
-
         $notify[] = ['success', 'Purchased ' . $plan->name . ' Successfully'];
         return redirect()->route('user.home')->withNotify($notify);
     }

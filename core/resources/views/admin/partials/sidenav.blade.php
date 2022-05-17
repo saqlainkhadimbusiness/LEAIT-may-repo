@@ -27,7 +27,7 @@
                         <span class="menu-title">@lang('Packages')</span>
                     </a>
                 </li>
-                
+
                 <li class="sidebar-menu-item {{menuActive('admin.ads*')}}">
                     <a href="{{route('admin.ads')}}" class="nav-link ">
                         <i class="menu-icon las la-ad"></i>
@@ -62,6 +62,14 @@
                                     <span class="menu-title">@lang('Active Users')</span>
                                 </a>
                             </li>
+
+                            <li class="sidebar-menu-item {{menuActive('admin.users.subscribed')}} ">
+                                <a href="{{route('admin.users.subscribed')}}" class="nav-link">
+                                    <i class="menu-icon las la-dot-circle"></i>
+                                    <span class="menu-title">@lang('Subscribed Users')</span>
+                                </a>
+                            </li>
+
                             <li class="sidebar-menu-item {{menuActive('admin.users.banned')}} ">
                                 <a href="{{route('admin.users.banned')}}" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>

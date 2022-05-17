@@ -936,12 +936,13 @@ function updateBV($id, $bv, $details)
                 break;
             }
             $posUser = User::find($posid);
-            $left=getPositionUser($id, 1);
-            $right=getPositionUser($id, 2);
+            $left=getPositionUser($posid, 1);
+            $right=getPositionUser($posid, 2);
+            $extra = UserExtra::where('user_id', $posid)->first();
             if((isset($left)  && $left) && (isset($right) && $right)){
                 if ($posUser->plan_id != 0) {
                     $position = getPositionLocation($id);
-                    $extra = UserExtra::where('user_id', $posid)->first();
+//                    $extra = UserExtra::where('user_id', $posid)->first();
                     if(isset($extra) && $extra) {
                         $bvlog = new BvLog();
                         $bvlog->user_id = $posid;
@@ -954,7 +955,6 @@ function updateBV($id, $bv, $details)
                             $bvlog->position = '2';
                         }
                         $extra->save();
-
                         $bvlog->amount = $bv;
                         $bvlog->trx_type = '+';
                         $bvlog->details = $details;
@@ -1220,4 +1220,12 @@ function displayRating($val)
         $result .= '<i class="lar la-star text--warning"></i>';
     }
     return $result;
+}
+function is_matching_bonus($user_id){
+    $extra=UserExtra::where('user_id', getPositionId($user_id))->where('bv_left',0)->where('bv_right',0)->first();
+    if(isset($extra)&&$extra){
+        return true;
+    }
+    return false;
+
 }

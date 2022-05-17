@@ -13,6 +13,7 @@ use App\Models\UserLogin;
 use App\Models\WithdrawMethod;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -23,7 +24,8 @@ class ManageUsersController extends Controller
     {
         $page_title = 'Manage Users';
         $empty_message = 'No user found';
-        $users = User::latest()->paginate(getPaginate());
+        $users = User::select('users.*','plans.name as subscribe_package_name')
+            ->leftjoin('plans', 'users.plan_id', '=', 'plans.id')->latest()->paginate(getPaginate());
         return view('admin.users.list', compact('page_title', 'empty_message', 'users'));
     }
 
@@ -31,15 +33,29 @@ class ManageUsersController extends Controller
     {
         $page_title = 'Manage Active Users';
         $empty_message = 'No active user found';
-        $users = User::active()->latest()->paginate(getPaginate());
+        $users = User::select('users.*','plans.name as subscribe_package_name')
+            ->leftjoin('plans', 'users.plan_id', '=', 'plans.id')
+            ->where('users.status','!=',0)->latest()->paginate(getPaginate());
         return view('admin.users.list', compact('page_title', 'empty_message', 'users'));
     }
 
+    public function subscribedUsers()
+    {
+        $page_title = 'Manage subscribed Users';
+        $empty_message = 'No subscribed user found';
+        $users = User::select('users.*','plans.name as subscribe_package_name')
+            ->leftjoin('plans', 'users.plan_id', '=', 'plans.id')
+            ->where('users.plan_id','!=',0)
+            ->latest()->paginate(getPaginate());
+        return view('admin.users.list', compact('page_title', 'empty_message', 'users'));
+    }
     public function bannedUsers()
     {
         $page_title = 'Banned Users';
         $empty_message = 'No banned user found';
-        $users = User::banned()->latest()->paginate(getPaginate());
+        $users = User::select('users.*','plans.name as subscribe_package_name')
+            ->leftjoin('plans', 'users.plan_id', '=', 'plans.id')
+            ->banned()->latest()->paginate(getPaginate());
         return view('admin.users.list', compact('page_title', 'empty_message', 'users'));
     }
 
@@ -47,14 +63,19 @@ class ManageUsersController extends Controller
     {
         $page_title = 'Email Unverified Users';
         $empty_message = 'No email unverified user found';
-        $users = User::emailUnverified()->latest()->paginate(getPaginate());
+        $users = User::select('users.*','plans.name as subscribe_package_name')
+            ->leftjoin('plans', 'users.plan_id', '=', 'plans.id')
+            ->emailUnverified()->latest()->paginate(getPaginate());
         return view('admin.users.list', compact('page_title', 'empty_message', 'users'));
     }
     public function emailVerifiedUsers()
     {
         $page_title = 'Email Verified Users';
         $empty_message = 'No email verified user found';
-        $users = User::emailVerified()->latest()->paginate(getPaginate());
+        $users = User::select('users.*','plans.name as subscribe_package_name')
+            ->join('plans', 'users.plan_id', '=', 'plans.id')
+            ->where('users.plan_id','!=',0)
+            ->emailVerified()->latest()->paginate(getPaginate());
         return view('admin.users.list', compact('page_title', 'empty_message', 'users'));
     }
 
@@ -63,14 +84,20 @@ class ManageUsersController extends Controller
     {
         $page_title = 'SMS Unverified Users';
         $empty_message = 'No sms unverified user found';
-        $users = User::smsUnverified()->latest()->paginate(getPaginate());
+        $users = User::select('users.*','plans.name as subscribe_package_name')
+            ->join('plans', 'users.plan_id', '=', 'plans.id')
+            ->where('users.plan_id','!=',0)
+            ->smsUnverified()->latest()->paginate(getPaginate());
         return view('admin.users.list', compact('page_title', 'empty_message', 'users'));
     }
     public function smsVerifiedUsers()
     {
         $page_title = 'SMS Verified Users';
         $empty_message = 'No sms verified user found';
-        $users = User::smsVerified()->latest()->paginate(getPaginate());
+        $users = User::select('users.*','plans.name as subscribe_package_name')
+            ->join('plans', 'users.plan_id', '=', 'plans.id')
+            ->where('users.plan_id','!=',0)
+            ->smsVerified()->latest()->paginate(getPaginate());
         return view('admin.users.list', compact('page_title', 'empty_message', 'users'));
     }
 
