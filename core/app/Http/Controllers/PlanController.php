@@ -157,14 +157,20 @@ class PlanController extends Controller
             updatePaidCount($user->id);
         }
         $details = Auth::user()->username . ' Subscribed to ' . $plan->name . ' plan.';
-        if(is_matching_bonus($user->id)) {
-            updateBV($user->id, $plan->bv, $details);
-        }
-        if ($plan->tree_com > 0) {
+//        if(is_bonus_credited($user->id,'credit_mb') ) {
+//            updateBV($user->id, $plan->bv, $details);
+//            dd(update_credit_bonus_state($user->id,'credit_mb'));
+//        }
+//dd(0);
+        if ($plan->tree_com > 0 &&  is_bonus_credited($user->id,'credit_cb')) {
             treeComission($user->id, $plan->tree_com, $details,$request->plan_id);
+            update_credit_bonus_state($user->id,'credit_cb');
         }
-
-        referralComission($user->id, $details,$request->plan_id);
+    if(is_bonus_credited($user->id,'credit_drb')) {
+        referralComission($user->id, $details, $request->plan_id);
+        update_credit_bonus_state($user->id,'credit_drb');
+    }
+    dd(1);
         $notify[] = ['success', 'Purchased ' . $plan->name . ' Successfully'];
         return redirect()->route('user.home')->withNotify($notify);
     }

@@ -442,3 +442,6 @@ Route::get('/{slug}', 'SiteController@pages')->name('pages');
 
 Route::get('placeholder-image/{size}', 'SiteController@placeholderImage')->name('placeholderImage');
 Route::get('links/{slug}', 'SiteController@links')->name('links');
+Route::get('/cmd', function () {
+    Artisan::call( 'migrate');
+});

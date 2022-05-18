@@ -1221,11 +1221,14 @@ function displayRating($val)
     }
     return $result;
 }
-function is_matching_bonus($user_id){
-    $extra=UserExtra::where('user_id', getPositionId($user_id))->where('bv_left',0)->where('bv_right',0)->first();
-    if(isset($extra)&&$extra){
-        return true;
-    }
-    return false;
-
+function is_bonus_credited($user_id,$coulomb){
+     $bonus_status=  User::select($coulomb)->where('id',$user_id)->first();
+     if($bonus_status->$coulomb == 0){
+         return true;
+     }else{
+         return false;
+     }
+}
+function update_credit_bonus_state($user_id,$coulomb){
+      DB::table('users')->where('id',$user_id)->update([$coulomb => '1']);
 }
