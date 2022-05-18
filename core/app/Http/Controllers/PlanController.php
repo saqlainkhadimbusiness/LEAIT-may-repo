@@ -155,7 +155,7 @@ class PlanController extends Controller
             updatePaidCount($user->id);
         }
         $details = Auth::user()->username . ' Subscribed to ' . $plan->name . ' plan.';
-        if(is_matching_credited($user->id)) {
+        if(is_matching_credited($user->id) && is_bonus_credited($user->id,'credit_mb')) {
             updateMatchingBonus($user->id,$details);
         }
         if ($plan->tree_com > 0 &&  is_bonus_credited($user->id,'credit_cb')) {
