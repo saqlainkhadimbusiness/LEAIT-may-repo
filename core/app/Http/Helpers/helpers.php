@@ -859,7 +859,15 @@ function getPositionId($id)
         return 0;
     }
 }
-
+function getReferralId($id)
+{
+    $user = User::find($id);
+    if ($user) {
+        return $user->ref_id;
+    } else {
+        return 0;
+    }
+}
 function getPositionLocation($id)
 {
     $user = User::find($id);
@@ -925,8 +933,32 @@ function updatePaidCount($id)
     }
 
 }
+function updateMatchingBonus($user_id,$details)
+{
+    $ref_id=getReferralId($user_id);
+    $referral=User::find($ref_id);
+    $left=getPositionUser($ref_id, 1);
+    $right=getPositionUser($ref_id, 2);
+    if((isset($left)  && $left) && (isset($right) && $right)){
+        if ($referral->plan_id != 0) {
+            $newMatchingBonus=1+$referral->matching_bonus;
+            $query=DB::table('users')->where('id',$referral->id)->update(['matching_bonus' => $newMatchingBonus]);
+            if($query){
+                $referral->transactions()->create([
+                    'amount' => '1',
+                    'charge' => 0,
+                    'trx_type' => '+',
+                    'details' => $details,
+                    'remark' => 'matching_bonus',
+                    'trx' => getTrx(),
+                    'post_balance' => getAmount($referral->balance),
+                ]);
 
-
+            }
+            update_mb_state($user_id);
+        }
+    }
+}
 function updateBV($id, $bv, $details)
 {
     while ($id != "" || $id != "0") {
@@ -1231,4 +1263,25 @@ function is_bonus_credited($user_id,$coulomb){
 }
 function update_credit_bonus_state($user_id,$coulomb){
       DB::table('users')->where('id',$user_id)->update([$coulomb => '1']);
+}
+function is_matching_credited($user_id){
+
+    $ref_id=getReferralId($user_id);
+    $left=getPositionUser($ref_id, 1);
+    $right=getPositionUser($ref_id, 2);
+    if((isset($left)  && $left) && (isset($right) && $right)){
+        return true;
+    }
+    return false;
+}
+function update_mb_state($user_id){
+
+    $ref_id=getReferralId($user_id);
+    $left=getPositionUser($ref_id, 1);
+    $right=getPositionUser($ref_id, 2);
+    if((isset($left)  && $left) && (isset($right) && $right)){
+        DB::table('users')->where('id',$left->id)->update(['credit_mb' => '1']);
+        DB::table('users')->where('id',$right->id)->update(['credit_mb' => '1']);
+    }
+
 }

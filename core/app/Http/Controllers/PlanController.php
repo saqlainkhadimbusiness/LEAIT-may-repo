@@ -117,8 +117,6 @@ class PlanController extends Controller
         $gnl = GeneralSetting::first();
 
         $user = User::find(Auth::id());
-        $current_user=$user->id;
-//        dd($current_user);
         if ($user->balance < $plan->price) {
             $notify[] = ['error', 'Insufficient Balance'];
             return back()->withNotify($notify);
@@ -157,11 +155,9 @@ class PlanController extends Controller
             updatePaidCount($user->id);
         }
         $details = Auth::user()->username . ' Subscribed to ' . $plan->name . ' plan.';
-//        if(is_bonus_credited($user->id,'credit_mb') ) {
-//            updateBV($user->id, $plan->bv, $details);
-//            dd(update_credit_bonus_state($user->id,'credit_mb'));
-//        }
-//dd(0);
+        if(is_matching_credited($user->id)) {
+            updateMatchingBonus($user->id,$details);
+        }
         if ($plan->tree_com > 0 &&  is_bonus_credited($user->id,'credit_cb')) {
             treeComission($user->id, $plan->tree_com, $details,$request->plan_id);
             update_credit_bonus_state($user->id,'credit_cb');
