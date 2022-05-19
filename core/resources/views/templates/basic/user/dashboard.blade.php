@@ -185,13 +185,13 @@
                <tr>
                     <td style="text-align: left"><b style="font-size: 14px;"> Matching Bonus</b></td>
                     <td style="text-align: left"><b style="font-size: 14px;">
-                    {{ auth()->user()->userExtra->bv_left + auth()->user()->userExtra->bv_right }}
+                    {{ getAmount(auth()->user()->matching_bonus) }}
                     {{ $general->cur_text }}</b></td>
                 </tr>
 
                 <tr>
                     <td style="text-align: left"><b style="font-size: 14px;"> Pairing Bonus</b></td>
-                    <td style="text-align: left"><b style="font-size: 14px;">  0 {{ $general->cur_text }}</b></td>
+                    <td style="text-align: left"><b style="font-size: 14px;">   {{ getAmount(auth()->user()->pairing_bonus) }} {{ $general->cur_text }}</b></td>
                </tr>
 
                <tr>
@@ -215,7 +215,7 @@
 
                 <tr>
                      <td style="text-align: left"><b style="font-size: 14px;"> <b style="font-size: 14px;">My Cash Balance</b></b></td>
-                     <td style="text-align: left"><b style="font-size: 14px;">{{ getAmount(auth()->user()->balance) +$adRevenue +auth()->user()->userExtra->bv_left +auth()->user()->userExtra->bv_right +getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com) - $withdraw_bonuses }} {{ $general->cur_text }}</b></td>
+                     <td style="text-align: left"><b style="font-size: 14px;">{{ getAmount(auth()->user()->balance) +$adRevenue +getAmount(auth()->user()->pairing_bonus) +getAmount(auth()->user()->matching_bonus) +getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com) - $withdraw_bonuses }} {{ $general->cur_text }}</b></td>
                 </tr>
 
 

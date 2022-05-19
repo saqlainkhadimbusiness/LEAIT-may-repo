@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Adrevenue;
 use App\Models\Deposit;
 use App\Models\BvLog;
 use App\Models\Gateway;
@@ -10,6 +11,7 @@ use App\Models\SupportTicket;
 use App\Models\Transaction;
 use App\Models\User;
 use App\Models\UserLogin;
+use App\Models\withdraw_bonus;
 use App\Models\WithdrawMethod;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
@@ -147,10 +149,12 @@ class ManageUsersController extends Controller
         $totalDeposit       = Deposit::where('user_id',$user->id)->where('status',1)->sum('amount');
         $totalWithdraw      = Withdrawal::where('user_id',$user->id)->where('status',1)->sum('amount');
         $totalTransaction   = Transaction::where('user_id',$user->id)->count();
+        $adRevenue        = Adrevenue::where("user_id", auth()->user()->id)->sum("ad_revenue");
+        $withdraw_bonuses        = withdraw_bonus::where("user_id", auth()->user()->id)->sum("withdrawed_bonus");
 
         $totalBvCut         = BvLog::where('user_id',$user->id)->where('trx_type', '-')->sum('amount');
         return view('admin.users.detail', compact('page_title','ref_id','user','totalDeposit',
-            'totalWithdraw','totalTransaction',  'totalBvCut'));
+            'totalWithdraw','totalTransaction',  'totalBvCut','adRevenue','withdraw_bonuses'));
     }
 
 

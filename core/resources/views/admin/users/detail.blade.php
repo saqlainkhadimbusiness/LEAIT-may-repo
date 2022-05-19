@@ -34,7 +34,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             @lang('Balance')
-                            <span class="font-weight-bold"> {{getAmount($user->balance)}}  {{$general->cur_text}} </span>
+                            <span class="font-weight-bold"> {{ getAmount(auth()->user()->balance) +$adRevenue +getAmount(auth()->user()->pairing_bonus) +getAmount(auth()->user()->matching_bonus) +getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com) - $withdraw_bonuses }} {{ $general->cur_text }} </span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             @lang('Total BV')

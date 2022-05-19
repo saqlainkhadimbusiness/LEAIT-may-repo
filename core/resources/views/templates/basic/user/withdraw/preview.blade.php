@@ -6,7 +6,7 @@
             <div class="col-lg-8 ">
                 <div class="card card-deposit">
                     <h5 class="text-center my-3">@lang('Current Balance') :
-                          <strong>{{ getAmount(auth()->user()->balance) +$adRevenue +auth()->user()->userExtra->bv_left +auth()->user()->userExtra->bv_right +getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com) -$withdraw_bonuses}} {{ $general->cur_text }}</strong></h5>
+                          <strong>{{ getAmount(auth()->user()->balance) +$adRevenue +getAmount(auth()->user()->pairing_bonus) +getAmount(auth()->user()->matching_bonus) +getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com) - $withdraw_bonuses }} {{ $general->cur_text }}</strong></h5>
                     <span class="text-center">
                         @php
                             echo  $withdraw->method->description;
@@ -42,7 +42,7 @@
                                 <div class="form-group mt-5">
                                     <label class="font-weight-bold">@lang('Balance Will be') : </label>
                                     <div class="input-group">
-                                        <input type="text" value="{{( getAmount(auth()->user()->balance) +$adRevenue +auth()->user()->userExtra->bv_left +auth()->user()->userExtra->bv_right +getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com) - ($withdraw->amount) -$withdraw_bonuses)}}"  class="form-control form-control-lg" placeholder="@lang('Enter Amount')" required readonly>
+                                        <input type="text" value="{{( getAmount(auth()->user()->balance) +$adRevenue +getAmount(auth()->user()->pairing_bonus) +getAmount(auth()->user()->matching_bonus) +getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com) - ($withdraw->amount) -$withdraw_bonuses)}}"  class="form-control form-control-lg" placeholder="@lang('Enter Amount')" required readonly>
                                         <div class="input-group-prepend">
                                             <span class="input-group-text ">{{ $general->cur_text }} </span>
                                         </div>
