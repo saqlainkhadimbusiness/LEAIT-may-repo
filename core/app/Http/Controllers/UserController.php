@@ -178,8 +178,8 @@ class UserController extends Controller
 
         $adRevenue       = Adrevenue::where("user_id", auth()->user()->id)->sum("ad_revenue");
         $withdrawed_bonus_sum=   withdraw_bonus::where("user_id", auth()->user()->id)->sum("withdrawed_bonus");;
-        $max_withdraw=getAmount(auth()->user()->balance) +$adRevenue +getAmount(auth()->user()->pairing_bonus) +getAmount(auth()->user()->matching_bonus)+getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com)-$withdrawed_bonus_sum;
-        if ($request->amount >= $max_withdraw) {
+        $max_withdraw=getAmount(auth()->user()->balance) +$adRevenue +getAmount(auth()->user()->matching_bonus)+getAmount(auth()->user()->pairing_bonus)+getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com)-$withdrawed_bonus_sum;
+        if ($request->amount > $max_withdraw) {
             $notify[] = ['error', 'Your do not have Sufficient Balance For Withdraw.'];
             return back()->withNotify($notify);
         }
@@ -243,9 +243,8 @@ class UserController extends Controller
         $user = auth()->user();
         $adRevenue       = Adrevenue::where("user_id", auth()->user()->id)->sum("ad_revenue");
         $withdrawed_bonus_sum=   withdraw_bonus::where("user_id", auth()->user()->id)->sum("withdrawed_bonus");;
-        $max_withdraw=getAmount(auth()->user()->balance) +$adRevenue +getAmount(auth()->user()->pairing_bonus) +getAmount(auth()->user()->matching_bonus) +getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com)-$withdrawed_bonus_sum;
-
-        if (getAmount($withdraw->amount) >= $max_withdraw) {
+        $max_withdraw=getAmount(auth()->user()->balance) +$adRevenue +getAmount(auth()->user()->matching_bonus)+getAmount(auth()->user()->pairing_bonus)+getAmount(auth()->user()->total_ref_com)+getAmount(auth()->user()->total_binary_com)-$withdrawed_bonus_sum;
+        if ($request->amount > $max_withdraw) {
             $notify[] = ['error', 'Your Request Amount is Larger Then Your Current Balance.'];
             return back()->withNotify($notify);
         }
