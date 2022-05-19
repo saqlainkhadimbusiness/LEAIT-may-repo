@@ -158,6 +158,9 @@ class PlanController extends Controller
         if(is_matching_credited($user->id) && is_bonus_credited($user->id,'credit_mb')) {
             updateMatchingBonus($user->id,$details);
         }
+        if(is_bonus_credited($user->id,'credit_pb')) {
+            updatePairingBonus($user->id,$details);
+        }
         if ($plan->tree_com > 0 &&  is_bonus_credited($user->id,'credit_cb')) {
             treeComission($user->id, $plan->tree_com, $details,$request->plan_id);
             update_credit_bonus_state($user->id,'credit_cb');
@@ -166,7 +169,6 @@ class PlanController extends Controller
         referralComission($user->id, $details, $request->plan_id);
         update_credit_bonus_state($user->id,'credit_drb');
     }
-    dd(1);
         $notify[] = ['success', 'Purchased ' . $plan->name . ' Successfully'];
         return redirect()->route('user.home')->withNotify($notify);
     }

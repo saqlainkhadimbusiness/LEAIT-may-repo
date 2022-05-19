@@ -959,6 +959,37 @@ function updateMatchingBonus($user_id,$details)
         }
     }
 }
+function updatePairingBonus($user_id,$details){
+
+    $ref_id=getReferralId($user_id);
+    while (isset($ref_id) &&  $ref_id!=0){
+
+        $referral=User::find($ref_id);
+        if ($referral->plan_id != 0) {
+            $newPairingBonus = 1 + $referral->pairing_bonus;
+            $query = DB::table('users')->where('id', $referral->id)->update(['pairing_bonus' => $newPairingBonus]);
+            if ($query) {
+                $referral->transactions()->create([
+                    'amount' => '1',
+                    'charge' => 0,
+                    'trx_type' => '+',
+                    'details' => $details,
+                    'remark' => 'pairing_bonus',
+                    'trx' => getTrx(),
+                    'post_balance' => getAmount($referral->balance),
+                ]);
+
+            }
+        }
+        $ids[]=$referral->id;
+        $ref_id = getReferralId($referral->id);
+
+        if($ref_id=='' || $ref_id==0 || $ref_id=='0'){
+            break;
+        }
+    }
+    update_credit_bonus_state($user_id,'credit_pb');
+}
 function updateBV($id, $bv, $details)
 {
     while ($id != "" || $id != "0") {
@@ -1255,11 +1286,11 @@ function displayRating($val)
 }
 function is_bonus_credited($user_id,$coulomb){
      $bonus_status=  User::select($coulomb)->where('id',$user_id)->first();
-     if($bonus_status->$coulomb == 0){
+     if($bonus_status && $bonus_status->$coulomb == 0){
          return true;
-     }else{
-         return false;
      }
+     return false;
+
 }
 function update_credit_bonus_state($user_id,$coulomb){
       DB::table('users')->where('id',$user_id)->update([$coulomb => '1']);
