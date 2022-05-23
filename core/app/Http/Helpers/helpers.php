@@ -962,6 +962,8 @@ function updateMatchingBonus($user_id,$details)
 function updatePairingBonus($user_id,$details){
 
     $ref_id=getReferralId($user_id);
+    $ref_id=getReferralId($ref_id);
+//    dd($ref_id);
     while (isset($ref_id) &&  $ref_id!=0){
 
         $referral=User::find($ref_id);
@@ -1035,54 +1037,54 @@ function updateBV($id, $bv, $details)
 }
 
 
-function treeComission($id, $amount, $details,$plan_id)
+function treeComission($user_id, $amount, $details,$plan_id)
 {
-    $fromUser = User::find($id);
-    while ($id != "" || $id != "0") {
-        if (isUserExists($id)) {
-            $posid = getPositionId($id);
-            if ($posid == "0") {
-                break;
-            }
 
-            $posUser = User::find($posid);
-            if ($posUser->plan_id != 0) {
-                $user = User::find($id);
-                $refer =  User::find($user->ref_id);
-                if(isset($refer) && $refer){
-                    $crb=custom_refferals_bonus::where('plan_id', $plan_id)->get();
-                    if(count($crb )>0  && isset($crb) && $crb){
-                        foreach($crb as $crb_plan){
-                            if( $refer->plan_id == $crb_plan->referred_by_plan_id ){
-                                $amount=$crb_plan->custom_cycler_com;
-                            }
-                        }
+    $user = User::find($user_id);
+    $refer = User::find($user->ref_id);
+    if ($refer) {
+        $plan = Plan::find($refer->plan_id);
+        if ($plan) {
+
+            $crb=custom_refferals_bonus::where('plan_id', $plan_id)->get();
+            if(count($crb )>0  && isset( $crb) ){
+                foreach($crb as $crb_plan){
+                    if( $refer->plan_id == $crb_plan->referred_by_plan_id ){
+                        $amount2=$crb_plan->custom_cycler_com;
+                    }else{
+                        $amount2=$plan->tree_com;
                     }
                 }
-
-//                $posUser->balance  += $amount;
-                $posUser->total_binary_com += $amount;
-                $posUser->save();
-
-                $ids[]=$posUser->id;
-                $amounts[]=$amount;
-               $posUser->transactions()->create([
-                    'amount' => $amount,
-                    'charge' => 0,
-                    'trx_type' => '+',
-                    'details' => $details,
-                    'remark' => 'binary_commission',
-                    'trx' => getTrx(),
-                    'post_balance' => getAmount($posUser->balance),
-                ]);
-
-
             }
-            $id = $posid;
-            // dd($ids,$amounts);
-        } else {
-            break;
+            if(!isset($amount) ){
+                $amount = $plan->ref_com;
+            }
+            $refer->total_binary_com += $amount2;
+            $refer->save();
+            $trx = $refer->transactions()->create([
+                'amount' => $amount,
+                'charge' => 0,
+                'trx_type' => '+',
+                'details' => $details,
+                'remark' => 'referral_commission',
+                'trx' => getTrx(),
+                'post_balance' => getAmount($refer->balance),
+
+            ]);
+
+
+            $gnl = GeneralSetting::first();
+
+            notify($refer, 'referral_commission', [
+                'trx' => $trx->trx,
+                'amount' => getAmount($amount),
+                'currency' => $gnl->cur_text,
+                'username' => $user->username,
+                'post_balance' => getAmount($refer->balance),
+            ]);
+
         }
+
     }
 
 }
@@ -1101,17 +1103,16 @@ function referralComission($user_id, $details,$plan_id)
                 foreach($crb as $crb_plan){
                     if( $refer->plan_id == $crb_plan->referred_by_plan_id ){
                         $amount=$crb_plan->custom_reffer_com;
+                    }else{
+                        $amount=$plan->ref_com;
                     }
                 }
             }
             if(!isset($amount) ){
                 $amount = $plan->ref_com;
             }
-
-//            $refer->balance += $amount;
             $refer->total_ref_com += $amount;
             $refer->save();
-
             $trx = $refer->transactions()->create([
                 'amount' => $amount,
                 'charge' => 0,
@@ -1122,9 +1123,6 @@ function referralComission($user_id, $details,$plan_id)
                 'post_balance' => getAmount($refer->balance),
 
             ]);
-
-
-
 
 
             $gnl = GeneralSetting::first();

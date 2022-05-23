@@ -185,13 +185,13 @@
                <tr>
                     <td style="text-align: left"><b style="font-size: 14px;"> Matching Bonus</b></td>
                     <td style="text-align: left"><b style="font-size: 14px;">
-                    {{ getAmount(auth()->user()->matching_bonus) }}
+                    {{ getAmount(auth()->user()->pairing_bonus) }}
                     {{ $general->cur_text }}</b></td>
                 </tr>
 
                 <tr>
                     <td style="text-align: left"><b style="font-size: 14px;"> Pairing Bonus</b></td>
-                    <td style="text-align: left"><b style="font-size: 14px;">   {{ getAmount(auth()->user()->pairing_bonus) }} {{ $general->cur_text }}</b></td>
+                    <td style="text-align: left"><b style="font-size: 14px;">   {{ getAmount(auth()->user()->matching_bonus) }} {{ $general->cur_text }}</b></td>
                </tr>
 
                <tr>
