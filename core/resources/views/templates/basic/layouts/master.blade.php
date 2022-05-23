@@ -124,9 +124,9 @@ html, body {
                 Mail us : <a href="mailto:{{@$contact->data_values->email_address}}">{{@$contact->data_values->email_address}}</a></div><!--Header-Container-Top-->
             <div class="clear"></div>
             <div id="Header-Container-Top2">
-                <div class="logo"> <a href="{{url('/')}}"><h3 style="font-size: 20px;">Learn and Earn International</h3></a>
+                <div class="logo"> <a href="{{url('/')}}"><h3 style="font-size: 20px;">Learn and Earn IT International</h3></a>
                     <div class="learn_marquee">
-                        <marquee direction="left" scrollamount="3" width="100%">Learn and Earn International</marquee>
+                        <marquee direction="left" scrollamount="3" width="100%">Learn and Earn Anywhere</marquee>
                     </div>
                 </div>
                 <div class="rightarea">

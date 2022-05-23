@@ -33,9 +33,19 @@
             @endforeach
 
         </div>
+         <div style="width:70%;margin:auto;">
+        <div class="learn_marquee" >
+          <marquee direction="left" scrollamount="3" width="100%">New Way Of Learning With Earning</marquee>
+        </div>
+    </div>
         <div class="banner-prev"><i class="fas fa-angle-left"></i></div>
         <div class="banner-next"><i class="fas fa-angle-right"></i></div>
     </section>
+    <!--<div style="width:70%;margin:auto;">
+        <div class="learn_marquee" >
+          <marquee direction="right" scrollamount="3" width="100%">New Way Of Learning With Earning</marquee>
+        </div>
+    </div>-->
 
 <style type="text/css">
     .sabi-arow {
